@@ -1,0 +1,232 @@
+#huntergram_embed {
+	border: 1px solid rgb(219, 219, 219);
+	border-radius: 3px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background-color:white;
+	-webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#huntergram_embed .header
+ {
+	display: flex;
+	flex-direction: row;
+	height: 34px;
+	padding: 10px;
+}
+
+#huntergram_embed .header_text {
+	display: flex;
+	flex-direction: column;
+}
+
+#huntergram_embed .avatar {
+	border-radius:50%;
+	width:34px;
+	height:34px;
+}
+
+#huntergram_embed .avatar:hover {
+  opacity: 0.7;
+}
+
+#huntergram_embed .verified_username_anchor {
+	font-weight: 600;
+	text-decoration: none;
+	color:black;
+	font-size:14px;
+	line-height:18px;
+	margin-right:50px;
+}
+
+#huntergram_embed .verified_username {
+	margin-left:10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#huntergram_embed .verified_username:hover {
+	text-decoration: underline;
+}
+
+#huntergram_embed .verification {
+	margin-left: 4px;
+	height: 12px;
+	width: 12px;
+	background-position: 0px 0px;
+	background-size: 12px 12px;
+	background-image: url("resources/interface/verified_badge.png");
+	text-align:left;
+	float: left;
+	margin-bottom: -2.5px;
+}
+
+#huntergram_embed .follower_count {
+	margin-left:10px;
+	display:flex;
+	flex-direction:row;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: left;
+	color:#8e8e8e;
+	font-weight:400;
+}
+
+#huntergram_embed .content {
+	max-width:100%;
+}
+
+
+
+#huntergram_embed .content img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+
+#huntergram_embed .view_more_container
+{
+	height: 40px;
+	margin-left:16px; /*originally 12 */
+	margin-right:16px; /*originally 12 */
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+#huntergram_embed .view_more_prompt {
+	color:#0095f6;
+	font-size:14px;
+	line-height:18px;
+	font-weight:600;
+	text-decoration: none;
+}
+
+#huntergram_embed .view_more_prompt:hover {
+	text-decoration: underline;
+}
+
+#huntergram_embed .feedback {
+	margin-top: 12px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	margin-right: 16px;
+	display:flex;
+	flex-direction: row;
+}
+
+#huntergram_embed .like {
+	display: flex;
+	background-position: -18px 0px;
+	background-size: 18px 36px;
+	height: 18px;
+	width: 18px;
+	background-image: url("resources/interface/heart.png");
+	margin-right:9px; /*originally 12 */
+	opacity:0.9;
+}
+
+#huntergram_embed .like:hover {
+	background-position: 0px -18px;
+	background-image: url("resources/interface/heart.png");
+	opacity:1.0;
+	cursor:pointer;
+}
+
+
+#huntergram_embed .comment {
+	display: flex;
+	background-size: 18px 18px;
+	background-position: 0px 0px;
+	height: 18px;
+	width: 18px;
+	background-image: url("resources/interface/comment.png");
+	margin-right:10px; /*originally 12 */
+	opacity: 0.9;
+}
+
+#huntergram_embed .comment:hover {
+	opacity:0.6;
+	cursor:pointer;
+}
+
+#huntergram_embed .download {
+	display: flex;
+	background-size: 18px 18px;
+	background-position: 0px 0px;
+	height: 18px;
+	width: 18px;
+	background-image: url("resources/interface/download.png");
+	opacity: 0.9;
+}
+
+#huntergram_embed .download:hover {
+	opacity:0.6;
+}
+
+#huntergram_embed .bookmark_container {
+	margin-left:auto
+}
+
+#huntergram_embed .bookmark {
+	display: flex;
+	background-size: 18px 18px;
+	background-position: 0px 0px;
+	height: 18px;
+	width: 18px;
+	background-image: url("resources/interface/bookmark.png");
+	margin-left:auto;
+	margin-right:-2px;
+	opacity: 0.9;
+}
+
+#huntergram_embed .bookmark:hover {
+	opacity:0.6;
+	cursor:pointer;
+}
+
+#huntergram_embed .like_count {
+	margin-left:16px;
+	margin-right:16px;
+	margin-bottom:7px;
+}
+
+#huntergram_embed .like_count span {
+	color:black;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#huntergram_embed .caption {
+	margin-left:16px;
+	margin-right:16px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-bottom:16px;
+	font-weight: 400;
+	line-height: 18px;
+	font-size: 14px;
+}
+
+#huntergram_embed .caption_username {
+	margin-bottom: 9px;
+}
+
+#huntergram_embed .caption_username a {
+	color:black;
+	text-decoration: none;
+	font-weight:600;
+}
+
+#huntergram_embed .caption_username:hover {
+	text-decoration: underline;
+}
+
+#huntergram_embed .caption_content {
+/* eh, don't worry about it c: */
+}

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<html lang="en">
-	<head>
+<html lang="en" style="height:100%">
+	<head >
 		<link rel="stylesheet" type="text/css" href="./main.css">
-
+		<link rel="stylesheet" type="text/css" href="./huntergram/huntergram_embed.css">
+		<script type='text/javascript' src="./main.js"></script>
 	</head>
-	<body>
-		<script src="./main.js"></script>
+	<body style="height:100%" onload="insert_html('./huntergram/huntergram_embed.htm', 'huntergram_embed');">
 		<header>
 			<h1>
 				hunterirving.com
@@ -39,59 +39,7 @@
 							</div>
 							<div class="nav_element">
 								<h2>huntergram</h2>
-								<div class="huntergram_embed">
-									<div class="header">
-
-										<a href="http://www.hunterirving.com/huntergram">
-											<img class="avatar" src="resources/images/profile_pic.png">
-										</a>
-
-										<div class="header_text">
-
-												<a class="verified_username_anchor" href="http://www.hunterirving.com/huntergram">
-													<div class="verified_username">
-														hunter
-														<span class="verification"></span>
-													</div>
-												</a>
-
-											<div class="follower_count">420 Followers</div>
-										</div>
-									</div>
-									<div class="content">
-										<a href="http://www.hunterirving.com/huntergram">
-											<img src="resources/images/profile_pic.png" style="width: 100%;">
-										</a>
-									</div>
-									<div class="view_more_container">
-										<a class="view_more_prompt" href="http://www.hunterirving.com/huntergram">View More on Huntergram</a>
-									</div>
-									<div class="feedback">
-
-											<span class="like" onclick="incrementValue()"></span>
-
-
-											<span class="comment"></span>
-
-										<a href="resources/images/butterfly.jpg" download>
-											<span class="download"></span>
-										</a>
-										<span class="bookmark_container">
-											<span class="bookmark"></span>
-										</span>
-									</div>
-									<div class="like_count">
-											<span><span id="like_count_value">69</span> likes</span>
-									</div>
-									<div class="caption">
-										<div class="caption_username">
-											<a href="http://www.hunterirving.com/huntergram">hunter</a>
-										</div>
-										<div class="caption_content">
-											what the fricc is up!! my name is hunter and i love surfin' the web. welcome to my on-line photo feed aka the coolest place in cyberspace. hope to see you around but i can't be on-line that much cuz my mom says it ties up the phone line. laterz!!
-										</div>
-									</div>
-								</div>
+								<div id="huntergram_embed"></div>
 							</div>
 							<div class="nav_element">
 								<h2>gift shop</h2>
