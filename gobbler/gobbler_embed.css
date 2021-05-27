@@ -1,0 +1,112 @@
+.gobbler_embed {
+	display: flex;
+	flex-direction: column;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+	border: 1px solid #d2dbe0;
+	border-radius: 12px;
+	padding-left:16px;
+	padding-right:16px;
+	padding-top:12px;
+	padding-bottom:4px;
+	background-color:white;
+}
+
+.gobbler_header {
+	padding-bottom: 12px;
+	display: flex;
+	flex-direction: row;
+}
+
+.gobbler_avatar {
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.2s;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+.gobbler_avatar img {
+	width: 48px;
+}
+
+.gobbler_verified_display_name_and_username {
+
+}
+
+.gobbler_verified_display_name {
+
+}
+
+.gobbler_display_name {
+
+}
+
+.gobbler_verified_icon {
+
+}
+
+.gobbler_username {
+
+}
+
+.gobbler_icon {
+
+}
+
+.gobbler_gobble {
+
+}
+
+.gobbler_datetime_info_container {
+
+}
+
+.gobbler_datetime {
+
+}
+
+.gobbler_info_icon {
+
+}
+
+.gobbler_footer {
+
+}
+
+.gobbler_likes {
+
+}
+
+.gobbler_heart_icon {
+
+}
+
+.gobbler_like_count {
+
+}
+
+.gobbler_comments {
+
+}
+
+.gobbler_comment_icon {
+
+}
+
+.gobbler_comment_count {
+
+}
+
+.gobbler_copy_link {
+
+}
+
+.gobbler_link_icon {
+
+}
+
+.gobbler_copy_copied_link_text {
+
+}
