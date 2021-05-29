@@ -1,4 +1,4 @@
-function incrementValue()
+function incrementLikes()
 {
     var value = parseInt(document.getElementById('like_count_value').innerHTML, 10);
 

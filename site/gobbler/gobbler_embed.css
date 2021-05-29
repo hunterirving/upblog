@@ -11,13 +11,14 @@
 	background-color:white;
 }
 
-.gobbler_header {
+#gobbler_embed .header {
 	padding-bottom: 12px;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
 
-.gobbler_avatar {
+#gobbler_embed .avatar {
 	transition-property: background-color, box-shadow;
 	transition-duration: 0.2s;
 	margin: 0px;
@@ -27,87 +28,123 @@
 	right: 0px;
 }
 
-.gobbler_avatar img {
-	width: 48px;
+#gobbler_embed .avatar img {
+	width: 42px;
+	height: 42px;
 	border-radius:50%;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
-.gobbler_verified_display_name_and_username {
-
+#gobbler_embed .verified_display_name_and_username_anchor {
+	text-decoration: none;
+	color: black;
 }
 
-.gobbler_verified_display_name {
-
+#gobbler_embed .verified_display_name_and_username_anchor:hover .display_name{
+	text-decoration: underline;
 }
 
-.gobbler_display_name {
-
+#gobbler_embed .verified_display_name_and_username {
+	margin-left: 7px;
+	margin-right: 4px;
+	margin-top: -4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.gobbler_verified_icon {
-
-}
-
-.gobbler_username {
-
-}
-
-.gobbler_icon {
-
-}
-
-.gobbler_gobble {
-
-}
-
-.gobbler_datetime_info_container {
+#gobbler_embed .verified_display_name {
+	display: flex;
+	flex-direction: row;
+	-moz-box-align: center;
+	align-items: center;
 
 }
 
-.gobbler_datetime {
+#gobbler_embed .verified_display_name a {
+	text-decoration: none;
+}
+
+#gobbler_embed .display_name {
+	line-height: 2px;
+	font-size: 15px;
+	white-space: nowrap;
+	font-weight:700;
+}
+
+#gobbler_embed .verified_icon {
+	color: #1da1f2;
+	margin-left: 2px;
+	fill: currentcolor;
+	height: 16px;
+	margin-left: 4px;
+	margin-bottom: -3.5px;
+}
+
+#gobbler_embed .username {
+	color: #5b7083;
+	font-size: 14px;
 
 }
 
-.gobbler_info_icon {
+#gobbler_embed .icon {
+	margin-left:auto;
+	margin-top:6px;
+}
+
+#gobbler_embed .gobble {
 
 }
 
-.gobbler_footer {
+#gobbler_embed .datetime_info_container {
 
 }
 
-.gobbler_likes {
+#gobbler_embed .datetime {
 
 }
 
-.gobbler_heart_icon {
+#gobbler_embed .info_icon {
 
 }
 
-.gobbler_like_count {
+#gobbler_embed .footer {
 
 }
 
-.gobbler_comments {
+#gobbler_embed .likes {
 
 }
 
-.gobbler_comment_icon {
+#gobbler_embed .heart_icon {
 
 }
 
-.gobbler_comment_count {
+#gobbler_embed .like_count {
 
 }
 
-.gobbler_copy_link {
+#gobbler_embed .comments {
 
 }
 
-.gobbler_link_icon {
+#gobbler_embed .comment_icon {
 
 }
 
-.gobbler_copy_copied_link_text {
+#gobbler_embed .comment_count {
+
+}
+
+#gobbler_embed .copy_link {
+
+}
+
+#gobbler_embed .link_icon {
+
+}
+
+#gobbler_embed .copy_copied_link_text {
 
 }
