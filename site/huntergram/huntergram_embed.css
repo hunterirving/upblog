@@ -1,11 +1,13 @@
 #huntergram_embed {
 	border: 1px solid rgb(219, 219, 219);
-	border-radius: 3px;
+	border-radius: 8px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	background-color:white;
 	-webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+	padding-bottom: 2px;
+	filter: drop-shadow(0 0 0.75rem lightgrey);
 }
 
 #huntergram_embed .header

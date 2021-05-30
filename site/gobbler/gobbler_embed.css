@@ -3,16 +3,17 @@
 	flex-direction: column;
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
 	border: 1px solid #d2dbe0;
-	border-radius: 12px;
-	padding-left:16px;
-	padding-right:16px;
-	padding-top:12px;
+	border-radius: 8px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:16px;
 	padding-bottom:4px;
 	background-color:white;
+	filter: drop-shadow(0 0 0.75rem lightgrey);
 }
 
 #gobbler_embed .header {
-	padding-bottom: 12px;
+	padding-bottom: 9px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -67,19 +68,20 @@
 }
 
 #gobbler_embed .display_name {
-	line-height: 2px;
 	font-size: 15px;
 	white-space: nowrap;
-	font-weight:700;
+	font-weight: 700;
+	text-decoration: none;
+	color:black;
 }
 
 #gobbler_embed .verified_icon {
 	color: #1da1f2;
 	margin-left: 2px;
 	fill: currentcolor;
-	height: 16px;
-	margin-left: 4px;
-	margin-bottom: -3.5px;
+	height: 14px;
+	margin-left: 3px;
+	margin-bottom: -2.5px;
 }
 
 #gobbler_embed .username {
@@ -91,60 +93,101 @@
 #gobbler_embed .icon {
 	margin-left:auto;
 	margin-top:6px;
+	align-items: center;
 }
 
 #gobbler_embed .gobble {
-
+	display:flex;
+	font-size: 16px;
+	/*line-height: 24px;*/
+	cursor: text;
+	overflow-wrap: break-word;
 }
 
 #gobbler_embed .datetime_info_container {
-
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #5b7083;
+	margin-top: 8px;
+	margin-bottom: 4px;
 }
 
-#gobbler_embed .datetime {
+/*#gobbler_embed .datetime {
 
 }
 
 #gobbler_embed .info_icon {
 
-}
+}*/
 
 #gobbler_embed .footer {
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid #c4cfd6;
+	margin-top: 4px;
+	padding-top: 7px;
+}
 
+#gobbler_embed .likes_anchor {
+	margin-right: 20px;
 }
 
 #gobbler_embed .likes {
-
+	display: flex;
+	flex-direction: row;
+	-moz-box-align: center;
+	align-items: center;
 }
 
 #gobbler_embed .heart_icon {
-
+	max-width:24px;
+	max-height:24px;
+	margin-right:5px;
 }
 
 #gobbler_embed .like_count {
+	white-space: nowrap;
+}
 
+#gobbler_embed .comments_anchor {
+	margin-right: 20px;
 }
 
 #gobbler_embed .comments {
-
+	display: flex;
+	flex-direction: row;
+	-moz-box-align: center;
+	align-items: center;
 }
 
 #gobbler_embed .comment_icon {
-
+	max-width:24px;
+	max-height:24px;
+	margin-right:5px;
 }
 
 #gobbler_embed .comment_count {
+	white-space: nowrap;
+}
+
+#gobbler_embed .copy_link_anchor {
 
 }
 
 #gobbler_embed .copy_link {
-
+	display: flex;
+	flex-direction: row;
+	-moz-box-align: center;
+	align-items: center;
 }
 
 #gobbler_embed .link_icon {
-
+	max-width:24px;
+	max-height:24px;
+	margin-right:5px;
 }
 
-#gobbler_embed .copy_copied_link_text {
-
+#gobbler_embed .copy_link_text {
+	white-space: nowrap;
 }
