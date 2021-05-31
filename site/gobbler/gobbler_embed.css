@@ -126,7 +126,8 @@
 	flex-direction: row;
 	border-top: 1px solid #c4cfd6;
 	margin-top: 4px;
-	padding-top: 7px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #gobbler_embed .likes_anchor {
@@ -141,13 +142,14 @@
 }
 
 #gobbler_embed .heart_icon {
-	max-width:24px;
-	max-height:24px;
+	max-width:18px;
+	max-height:18px;
 	margin-right:5px;
 }
 
 #gobbler_embed .like_count {
 	white-space: nowrap;
+	font-size: 15px;
 }
 
 #gobbler_embed .comments_anchor {
@@ -162,13 +164,14 @@
 }
 
 #gobbler_embed .comment_icon {
-	max-width:24px;
-	max-height:24px;
+	max-width:18px;
+	max-height:18px;
 	margin-right:5px;
 }
 
 #gobbler_embed .comment_count {
 	white-space: nowrap;
+	font-size: 15px;
 }
 
 #gobbler_embed .copy_link_anchor {
@@ -183,11 +186,12 @@
 }
 
 #gobbler_embed .link_icon {
-	max-width:24px;
-	max-height:24px;
+	max-width:18px;
+	max-height:18px;
 	margin-right:5px;
 }
 
 #gobbler_embed .copy_link_text {
 	white-space: nowrap;
+	font-size: 15px;
 }
