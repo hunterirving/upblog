@@ -30,9 +30,9 @@
 }
 
 #gobbler_embed .avatar img {
-	width: 42px;
-	height: 42px;
 	border-radius:50%;
+	width:38px;
+	height:38px;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 }
@@ -68,7 +68,8 @@
 }
 
 #gobbler_embed .display_name {
-	font-size: 15px;
+	font-size:14px;
+	line-height:18px;
 	white-space: nowrap;
 	font-weight: 700;
 	text-decoration: none;
@@ -87,12 +88,11 @@
 #gobbler_embed .username {
 	color: #5b7083;
 	font-size: 14px;
-
 }
 
 #gobbler_embed .icon {
 	margin-left:auto;
-	margin-top:6px;
+	margin-top:2px;
 	align-items: center;
 }
 
@@ -132,6 +132,7 @@
 
 #gobbler_embed .likes_anchor {
 	margin-right: 20px;
+	text-decoration: none;
 }
 
 #gobbler_embed .likes {
@@ -144,16 +145,20 @@
 #gobbler_embed .heart_icon {
 	max-width:18px;
 	max-height:18px;
-	margin-right:5px;
+	margin-right:6px;
+	fill: #5b7083;
 }
 
 #gobbler_embed .like_count {
 	white-space: nowrap;
 	font-size: 15px;
+	color: #5b7083;
+	text-decoration: none;
 }
 
 #gobbler_embed .comments_anchor {
 	margin-right: 20px;
+	text-decoration: none;
 }
 
 #gobbler_embed .comments {
@@ -166,16 +171,18 @@
 #gobbler_embed .comment_icon {
 	max-width:18px;
 	max-height:18px;
-	margin-right:5px;
+	margin-right:6px;
+	fill: #5b7083;
 }
 
 #gobbler_embed .comment_count {
 	white-space: nowrap;
 	font-size: 15px;
+	color: #5b7083;
 }
 
 #gobbler_embed .copy_link_anchor {
-
+	text-decoration: none;
 }
 
 #gobbler_embed .copy_link {
@@ -188,10 +195,13 @@
 #gobbler_embed .link_icon {
 	max-width:18px;
 	max-height:18px;
-	margin-right:5px;
+	margin-right:6px;
+	fill: #5b7083;
 }
 
 #gobbler_embed .copy_link_text {
 	white-space: nowrap;
 	font-size: 15px;
+	color: #5b7083;
+	text-decoration: none;
 }
