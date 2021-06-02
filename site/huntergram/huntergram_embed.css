@@ -16,6 +16,7 @@
 	flex-direction: row;
 	height: 34px;
 	padding: 10px;
+	padding-left: 11px;
 }
 
 #huntergram_embed .header_text {
@@ -53,16 +54,13 @@
 	text-decoration: underline;
 }
 
-#huntergram_embed .verification {
-	margin-left: 4px;
-	height: 12px;
-	width: 12px;
-	background-position: 0px 0px;
-	background-size: 12px 12px;
-	background-image: url("resources/interface/verified_badge.png");
+#huntergram_embed .verified_icon {
+	margin-left: 3px;
+	height: 14px;
 	text-align:left;
 	float: left;
-	margin-bottom: -2.5px;
+	margin-bottom: -2px;
+	fill: #1da1f2;
 }
 
 #huntergram_embed .follower_count {
