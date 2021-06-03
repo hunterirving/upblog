@@ -57,9 +57,7 @@
 #huntergram_embed .verified_icon {
 	margin-left: 3px;
 	height: 14px;
-	text-align:left;
-	float: left;
-	margin-bottom: -2px;
+	margin-bottom: -4px;
 	fill: #1da1f2;
 }
 

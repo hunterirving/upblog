@@ -10,6 +10,12 @@
 	padding-bottom:4px;
 	background-color:white;
 	filter: drop-shadow(0 0 0.75rem lightgrey);
+
+	/*-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);*/
 }
 
 #gobbler_embed .header {
@@ -37,7 +43,6 @@
 #gobbler_embed .verified_display_name_and_username {
 	margin-left: 8px;
 	margin-right: 4px;
-	margin-top: -4px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -79,27 +84,17 @@
 #gobbler_embed .gobble {
 	display:flex;
 	font-size: 16px;
-	/*line-height: 24px;*/
 	cursor: text;
 	overflow-wrap: break-word;
 }
 
-#gobbler_embed .datetime_info_container {
-	font-size: 15px;
-	line-height: 20px;
+#gobbler_embed .datetime_container {
+	font-size: 14px;
 	font-weight: 400;
 	color: #5b7083;
-	margin-top: 8px;
+	margin-top: 7px;
 	margin-bottom: 4px;
 }
-
-/*#gobbler_embed .datetime {
-
-}
-
-#gobbler_embed .info_icon {
-
-}*/
 
 #gobbler_embed .footer {
 	display: flex;
@@ -123,7 +118,6 @@
 	display: flex;
 	flex-direction: row;
 	-moz-box-align: center;
-	align-items: center;
 }
 
 #gobbler_embed .heart_icon {
@@ -135,7 +129,7 @@
 
 #gobbler_embed .like_count {
 	white-space: nowrap;
-	font-size: 15px;
+	font-size: 14px;
 	color: #5b7083;
 	text-decoration: none;
 }
@@ -153,7 +147,6 @@
 	display: flex;
 	flex-direction: row;
 	-moz-box-align: center;
-	align-items: center;
 }
 
 #gobbler_embed .comment_icon {
@@ -165,7 +158,7 @@
 
 #gobbler_embed .comment_count {
 	white-space: nowrap;
-	font-size: 15px;
+	font-size: 14px;
 	color: #5b7083;
 }
 
@@ -181,7 +174,6 @@
 	display: flex;
 	flex-direction: row;
 	-moz-box-align: center;
-	align-items: center;
 }
 
 #gobbler_embed .regobble_icon {
@@ -193,7 +185,7 @@
 
 #gobbler_embed .regobble_count {
 	white-space: nowrap;
-	font-size: 15px;
+	font-size: 14px;
 	color: #5b7083;
 	text-decoration: none;
 }
