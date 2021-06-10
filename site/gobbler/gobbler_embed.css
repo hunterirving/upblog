@@ -7,7 +7,6 @@
 	padding-left:20px;
 	padding-right:20px;
 	padding-top:16px;
-	padding-bottom:4px;
 	background-color:white;
 	filter: drop-shadow(0 0 0.75rem lightgrey);
 }
@@ -104,7 +103,7 @@
 	border-top: 1px solid #c4cfd6;
 	margin-top: 4px;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 }
 
 #gobbler_embed .likes_container {
@@ -123,7 +122,6 @@
 	max-width:18px;
 	max-height:18px;
 	margin-right:6px;
-	margin-top: 0.5px;
 	fill: #5b7083;
 }
 
@@ -151,7 +149,6 @@
 	max-width:18px;
 	max-height:18px;
 	margin-right:6px;
-	margin-top:0.5px;
 	fill: #5b7083;
 }
 
@@ -174,12 +171,9 @@
 }
 
 #gobbler_embed .regobble_icon {
-	max-width:18px;
-	max-height:18px;
 	margin-right:4px;
 	margin-top:1px;
 	fill: #5b7083;
-
 }
 
 #gobbler_embed .regobble_count {
