@@ -24,22 +24,25 @@ color: blue;
 
 }
 
-.blog_list {
+#blog_container {
  margin:0;
  padding:0;
+ font-size: 16px;
+ font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
  list-style: none;
  border: 1px solid #d2dbe0;
- border-radius: 8px;
+ border-bottom-left-radius: 8px;
+ border-top-left-radius: 8px;
  background-color: white;
- padding-left:20px;
+ padding-left:16px;
  padding-right:20px;
  padding-top:16px;
  padding-bottom:16px;
- height:100px;
+ height:200px;
  overflow-y:scroll;
 }
 
-.blog_list li {
+#blog_container li {
 	margin-bottom: 6px;
 }
 

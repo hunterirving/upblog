@@ -95,27 +95,23 @@
 	color: #5b7083;
 	margin-top: 7px;
 	margin-bottom: 4px;
+	border-bottom: 1px solid #c4cfd6;
+	padding-bottom: 10px;
 }
 
 #gobbler_embed .footer {
 	display: flex;
 	flex-direction: row;
-	border-top: 1px solid #c4cfd6;
 	margin-top: 4px;
-	padding-top: 10px;
 	padding-bottom: 8px;
+	justify-content: space-between;
+	width: 80%;
 }
 
 #gobbler_embed .likes_container {
-	width: 30%;
-}
-
-#gobbler_embed .likes_inner {
 	cursor: pointer;
 	text-decoration: none;
 	display: flex;
-	flex-direction: row;
-	-moz-box-align: center;
 }
 
 #gobbler_embed .heart_icon {
@@ -134,15 +130,9 @@
 }
 
 #gobbler_embed .comments_container {
-	width: 30%;
-}
-
-#gobbler_embed .comments_inner {
 	cursor: pointer;
 	text-decoration: none;
 	display: flex;
-	flex-direction: row;
-	-moz-box-align: center;
 }
 
 #gobbler_embed .comment_icon {
@@ -159,15 +149,9 @@
 }
 
 #gobbler_embed .regobble_container {
-	width: 30%;
-}
-
-#gobbler_embed .regobble_inner {
 	cursor: pointer;
 	text-decoration: none;
 	display: flex;
-	flex-direction: row;
-	-moz-box-align: center;
 }
 
 #gobbler_embed .regobble_icon {
