@@ -9,15 +9,17 @@
 	padding-top:16px;
 	background-color:white;
 	filter: drop-shadow(0 0 0.75rem lightgrey);
+	transition-duration: 0.5s;
 }
 
-.upside_down {
+/*.upside_down {
 	-moz-transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 	transform: rotate(180deg);
-}
+	transition-duration: 0.5s;
+}*/
 
 #gobbler_embed .header {
 	padding-bottom: 9px;
