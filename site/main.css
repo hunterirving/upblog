@@ -1,5 +1,5 @@
 body {
-	max-width: 625px;
+	max-width: 510px;
 	min-height: 100%;
 	padding:0;
 	margin:0;
@@ -11,6 +11,7 @@ body {
 	padding-left: 48px;
 	padding-right: 48px;
 	margin: auto;
+	position: relative;
 }
 
 h1 {
@@ -44,12 +45,20 @@ li {
 
 a {
 	text-decoration: none;
-	color: white;
+	color: #222222;
 	transition: color .15s ease-in-out;
 }
 
 a:hover {
 	color: cornflowerblue;
+}
+
+.inner {
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .centered {
@@ -58,25 +67,26 @@ a:hover {
 
 .hi {
 	margin-top: 120px;
-	margin-bottom: 100px;
+	margin-bottom: 80px;
 }
 
 .introduction {
 	padding-top:0px;
 	padding-bottom: 0px;
 	margin-top:0px;
-	margin-bottom:100px;
+	margin-bottom:80px;
 }
 
 .nav {
 	display: grid;
   grid-template-columns: auto auto auto;
 	font-size: 23px;
+	font-weight: 600;
 	margin-bottom:140px;
 }
 
 .nav_element {
-	padding-right:40px;
+	margin-right:85px;
 }
 
 /* Dark mode */
@@ -85,6 +95,9 @@ a:hover {
         background-color: #141414;
         color: #fafafa;
     }
+		a {
+			color: #fafafa;
+		}
 }
 
 @media (max-width: 700px)  {
