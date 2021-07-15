@@ -1,0 +1,15 @@
+body {
+	max-width: 1024px;
+	padding-left: 72px;
+	padding-right: 72px;
+	padding-top:120px;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+h2 {
+	font-size: 25px;
+	font-weight: 700;
+}
