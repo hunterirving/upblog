@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-	color: TEAL;
+	color: #6495ed;
 }
 
 .noselect {
@@ -53,6 +53,6 @@ a:hover {
 		color: #222222;
 	}
 	a:hover {
-		color: #0000ee;
+		color: #0000ff;
 	}
 }

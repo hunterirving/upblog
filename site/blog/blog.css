@@ -1,7 +1,7 @@
 body {
 	max-width: 1024px;
-	padding-left: 72px;
-	padding-right: 72px;
+	padding-left: 50px;
+	padding-right:50px;
 	padding-top:120px;
 }
 
@@ -12,4 +12,27 @@ body {
 h2 {
 	font-size: 25px;
 	font-weight: 700;
+	padding:0px;
+	margin:0px;
+	display: inline;
+}
+
+#plus{
+	float: right;
+	transition: transform .15s;
+	cursor: pointer;
+	font-size: 40px;
+	font-weight: 900;
+	font-family: 'Times New Roman', Times, serif;
+	margin-top: -3px;
+}
+
+#plus:before{
+	content: '+';
+}
+
+@media (max-width: 700px)  {
+	body {
+			padding-top: 50px;
+	}
 }
