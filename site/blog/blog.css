@@ -46,7 +46,7 @@ time {
 }
 
 #plus:hover {
-	color: #6495ed;
+	color: var(--highlight);
 }
 
 #blog_feed {
@@ -78,18 +78,33 @@ time {
 
 @media (max-width: 700px)  {
 	body {
-			padding-top: 50px;
+		padding-top: 50px;
 	}
 	.blog_post {
-		display: block;
+		display: inline-block;
+		margin-bottom: 50px;
 	}
 	.blog_details {
 		padding: 0px;
+		display:flex;
+		flex-direction:column;
 	}
+	time {
+		order:1;
+		font-size: 18px;
+	}
+	h3 {
+		order:2;
+		padding-bottom: 5px;
+		padding-top: 1px;
+	}
+
 	.blog_brief {
-		padding: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+
 	}
 	#breadcrumbs {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 	}
 }

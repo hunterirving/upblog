@@ -1,7 +1,13 @@
+:root {
+	--text: #fafafa;
+	--background: #141414;
+  --highlight: #6495ed;
+}
+
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	background-color: #141414;
-	color: #fafafa;
+	background-color: var(--background);
+	color: var(--text);
 }
 
 h1 {
@@ -25,12 +31,12 @@ li {
 
 a {
 	text-decoration: none;
-	color: #fafafa;
+	color: var(--text);
 	transition: .15s ease-in-out;
 }
 
 a:hover {
-	color: #6495ed;
+	color: var(--highlight);
 }
 
 .noselect {
@@ -45,14 +51,9 @@ a:hover {
 
 /* Dark mode by default, use light mode when preferred */
 @media (prefers-color-scheme: light) {
-	body {
-		background-color: #fafafa;
-		color: #222222;
-	}
-	a {
-		color: #222222;
-	}
-	a:hover {
-		color: #0000ff;
+	:root {
+		--text: #222222;
+		--background: #fafafa;
+	  --highlight: #0000ff;
 	}
 }
