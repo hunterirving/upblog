@@ -1,17 +1,21 @@
 var opened = 0
 
-function rotatePlus()
+function toggleNavLinks()
 {
-	var element = document.getElementById("plus");
-	if (opened == 0)
+	const isHidden = nav_links.classList.contains('hidden');
+
+	if (!isHidden)
 	{
-		element.style.transform = 'rotate(-45deg)';
-		opened = 1;
+		plus.style.transform = 'rotate(0deg)';
+		nav_links.style.opacity = "0%";
+		nav_links.style.height = "0px";
+		nav_links.classList.add('hidden');
 	}
 	else
 	{
-		element.style.transform = 'rotate(0deg)';
-		opened = 0;
+		plus.style.transform = 'rotate(-45deg)';
+		nav_links.style.opacity = "100%";
+		nav_links.style.height = "50px";
+		nav_links.classList.remove('hidden');
 	}
-
 }

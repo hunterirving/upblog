@@ -30,12 +30,11 @@ time {
 }
 
 #breadcrumbs {
-	margin-bottom: 90px;
+	margin-bottom: 45px;
 }
 
 #plus{
 	float: right;
-	transition: transform .15s;
 	cursor: pointer;
 	font-size: 40px;
 	font-weight: 900;
@@ -50,6 +49,7 @@ time {
 }
 
 #blog_feed {
+	margin-top: 45px;
 	margin-bottom: 60px;
 }
 
@@ -76,6 +76,19 @@ time {
 	padding-right: 10px;
 }
 
+
+
+#nav_links {
+	text-align: center;
+	transition: .15s ease-in-out;
+	opacity: 0%;
+	height: 0px;
+}
+
+.hidden {
+
+}
+
 @media (max-width: 700px)  {
 	body {
 		padding-top: 50px;
@@ -95,7 +108,7 @@ time {
 	}
 	h3 {
 		order:2;
-		padding-bottom: 5px;
+		padding-bottom: 4px;
 		padding-top: 1px;
 	}
 
@@ -104,7 +117,10 @@ time {
 		padding-right: 0px;
 
 	}
-	#breadcrumbs {
-		margin-bottom: 50px;
+	#blog_feed {
+		margin-top: 50px;
+	}
+	#nav_links {
+		text-align: left;
 	}
 }

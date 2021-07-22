@@ -31,7 +31,6 @@ ul a {
 	width:100%;
 }
 
-
 #hi {
 	margin-top: 120px;
 	margin-bottom: 80px;
@@ -81,7 +80,6 @@ ul a {
 .centered {
   margin: 0 auto;
 }
-
 
 @media (max-width: 700px)  {
 	#hi {
