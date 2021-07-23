@@ -84,7 +84,7 @@ time {
 	padding:0;
 }
 
-@media(max-width: 870px)  {
+@media only screen and(max-width: 870px)  {
 	#nav_links {
 		text-align: left;
 	}
@@ -93,7 +93,7 @@ time {
 	}
 }
 
-@media(max-width: 700px)  {
+@media only screen and (max-width: 700px)  {
 
 	.blog_post {
 		display: inline-block;
@@ -122,7 +122,7 @@ time {
 	}
 }
 
-@media(max-width: 500px)  {
+@media only screen and (max-width: 500px)  {
 	body {
 		padding-left: 20px;
 		padding-right:20px;
