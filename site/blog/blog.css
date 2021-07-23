@@ -84,7 +84,7 @@ time {
 	padding:0;
 }
 
-@media only screen and(max-width: 870px)  {
+@media only screen and (max-width: 870px)  {
 	#nav_links {
 		text-align: left;
 	}
