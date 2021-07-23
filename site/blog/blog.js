@@ -15,7 +15,7 @@ function toggleNavLinks()
 	{
 		plus.style.transform = 'rotate(-45deg)';
 		nav_links.style.opacity = "100%";
-		nav_links.style.height = "50px";
+		nav_links.style.height = "28px";
 		nav_links.classList.remove('hidden');
 	}
 }
