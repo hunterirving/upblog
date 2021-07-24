@@ -132,11 +132,10 @@ time {
 
 }
 
-@media only screen and (max-width: 500px)  {
+@media only screen and (max-width: 560px)  {
 	#page_container {
 		padding-left: 20px;
 		padding-right:20px;
 		padding-top:20px;
 	}
-
 }
