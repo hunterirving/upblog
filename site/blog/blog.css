@@ -50,25 +50,30 @@ time {
 	font-family: 'Times New Roman', Times, serif;
 }
 
-#plus_box:hover {
-	color: var(--highlight);
+#plus_box:hover #plus {
+	background: var(--highlight);
+}
+
+#plus_box:hover #plus:after {
+	background: var(--highlight);
 }
 
 #plus {
-	background: white;
+	background: var(--text);
 	height: 20px;
 	position: relative;
 	width: 4px;
 	transition: .15s ease-in-out;
 }
 #plus:after {
-	background: white;
+	background: var(--text);
 	content: "";
 	height: 4px;
 	left: -8px;
 	position: absolute;
 	top: 8px;
 	width: 20px;
+	transition: .15s ease-in-out;
 }
 
 #blog_feed {
