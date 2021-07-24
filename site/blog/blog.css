@@ -37,7 +37,10 @@ time {
 	margin-bottom: 45px;
 }
 
-#plus{
+#plus_box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	line-height:30px;
 	width: 30px;
 	height: 30px;
@@ -45,11 +48,27 @@ time {
 	font-size: 40px;
 	font-weight: 900;
 	font-family: 'Times New Roman', Times, serif;
-	transition: .15s ease-in-out;
 }
 
-#plus:hover {
+#plus_box:hover {
 	color: var(--highlight);
+}
+
+#plus {
+	background: white;
+	height: 20px;
+	position: relative;
+	width: 4px;
+	transition: .15s ease-in-out;
+}
+#plus:after {
+	background: white;
+	content: "";
+	height: 4px;
+	left: -8px;
+	position: absolute;
+	top: 8px;
+	width: 20px;
 }
 
 #blog_feed {
