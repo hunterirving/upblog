@@ -1,12 +1,13 @@
 body {
+	max-width: 100%;
+	min-height: 100%;
+}
+
+#page_container {
 	max-width: 1024px;
 	padding-left: 50px;
 	padding-right:50px;
 	padding-top:120px;
-}
-
-.centered {
-  margin: 0 auto;
 }
 
 h2 {
@@ -88,7 +89,7 @@ time {
 	#nav_links {
 		text-align: left;
 	}
-	body {
+	#page_container {
 		padding-top: 50px;
 	}
 }
@@ -123,7 +124,7 @@ time {
 }
 
 @media only screen and (max-width: 500px)  {
-	body {
+	#page_container {
 		padding-left: 20px;
 		padding-right:20px;
 		padding-top:20px;

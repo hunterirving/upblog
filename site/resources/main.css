@@ -49,6 +49,10 @@ a:hover {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+.centered {
+  margin: 0 auto;
+}
+
 /* Dark mode by default, use light mode when preferred */
 @media (prefers-color-scheme: light) {
 	:root {

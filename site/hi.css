@@ -1,16 +1,10 @@
 body {
-	width: -moz-fit-content;
-	height: -moz-fit-content;
-	width: -webkit-fit-content;
-	height: -webkit-fit-content;
+	max-width: 100%;
 	min-height: 100%;
 	padding:0;
 	margin:0;
 	display: flex;
 	flex-direction: column;
-	padding-left: 50px;
-	padding-right:50px;
-	position: relative;
 }
 
 h1 {
@@ -29,6 +23,11 @@ h4 {
 ul a {
 	display: inline-block; /*fill out selection area*/
 	width:100%;
+}
+
+#page_container {
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 #hi {
@@ -77,9 +76,7 @@ ul a {
 	padding-right:20px;
 }
 
-.centered {
-  margin: 0 auto;
-}
+
 
 @media (max-width: 700px)  {
 	#hi {
