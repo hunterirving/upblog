@@ -20,7 +20,7 @@ h4 {
 	padding: 0;
 }
 
-ul a {
+li a {
 	display: inline-block;
 	width:100%;
 	line-height: 32px;
@@ -78,7 +78,6 @@ ul a {
 	.centered {
 		margin: 0px;
 	}
-
 }
 
 @media only screen and (max-width: 600px)  {
@@ -90,6 +89,14 @@ ul a {
 	}
 	#hi {
 		margin-top: 35px;
+		font-size: 40px;
+		margin-bottom: 60px;
 	}
-
+	#introduction {
+		font-size: 30px;
+		margin-bottom: 60px;
+	}
+	li a {
+		font-size: 22px;
+	}
 }

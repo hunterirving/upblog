@@ -1,14 +1,16 @@
 :root {
 	--text:  #fafafa;
 	--background: #141414;
-  --highlight: #009090; /*#3373e6;*/
+  --highlight: #eeba30;
 	--seafoam: #05d5a1;
-	--teal: #22aadd;
+	--ice: #22aadd;
+	--teal: #00ADB5;
 	--lime: #33ff22;
-	--gold: #eeba30;
+	--goldenrod: #eeba30;
 	--pumpkin: #ff6400;
 	--rose: #ff3399;
-
+	--tomatosoup: #FF6347;
+	--forest: #3CB371;
 }
 
 body {
@@ -69,8 +71,8 @@ a {
 /* Dark mode by default, use light mode when preferred */
 @media (prefers-color-scheme: light) {
 	:root {
-		--text: #442222;
-		--background: #faf2f2;
-	  --highlight: #350fff;
+		--text: #2c2222;
+		--background: #f4f2f2;
+	  --highlight: #370fff;
 	}
 }
