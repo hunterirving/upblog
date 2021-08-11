@@ -1,5 +1,3 @@
-var opened = 0
-
 function toggleNavLinks()
 {
 	const isHidden = nav_links.classList.contains('hidden');

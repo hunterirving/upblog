@@ -1,9 +1,10 @@
 body {
 	max-width: 100%;
-	min-height: 100%;
 	margin:0;
 	display: flex;
 	flex-direction: column;
+	padding:0px;
+	min-height: 100vh;
 }
 
 h1 {
@@ -20,29 +21,23 @@ h4 {
 }
 
 ul a {
-	display: inline-block; /*fill out selection area*/
+	display: inline-block;
 	width:100%;
+	line-height: 32px;
 }
 
 #page_container {
 	padding-left: 50px;
 	padding-right: 50px;
+	height: 100%;
 }
 
 #hi {
 	margin-top: 120px;
 	margin-bottom: 80px;
-	width: -moz-fit-content;
-	height: -moz-fit-content;
-	width: -webkit-fit-content;
-	height: -webkit-fit-content;
 }
 
 #introduction {
-	width: -moz-fit-content;
-	height: -moz-fit-content;
-	width: -webkit-fit-content;
-	height: -webkit-fit-content;
 	padding-top:0px;
 	padding-bottom: 0px;
 	margin-top:0px;
@@ -52,10 +47,6 @@ ul a {
 #nav {
 	display: flex;
 	flex-direction: row;
-	width: -moz-fit-content;
-	height: -moz-fit-content;
-	width: -webkit-fit-content;
-	height: -webkit-fit-content;
 	font-size: 23px;
 	font-weight: 600;
 	margin:0;
@@ -74,7 +65,7 @@ ul a {
 	padding-right:20px;
 }
 
-@media (max-width: 700px)  {
+@media only screen and (max-width: 700px)  {
 	#hi {
 			margin-top: 50px;
 	}
@@ -87,4 +78,18 @@ ul a {
 	.centered {
 		margin: 0px;
 	}
+
+}
+
+@media only screen and (max-width: 600px)  {
+	#page_container {
+		padding-left: 20px;
+		padding-right:20px;
+		padding-top:0px;
+		padding-bottom:60px;
+	}
+	#hi {
+		margin-top: 35px;
+	}
+
 }
