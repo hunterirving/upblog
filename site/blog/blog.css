@@ -22,6 +22,7 @@ body {
 
 time {
 	line-height: 29px;
+	font-size: 18px;
 }
 
 #breadcrumb_container {
@@ -53,9 +54,11 @@ time {
 @media(any-hover: hover) and (any-pointer: fine) {
 	#plus_box:hover #plus {
 		background: var(--highlight);
+
 	}
 	#plus_box:hover #plus:after {
 		background: var(--highlight);
+
 	}
 }
 
@@ -64,7 +67,7 @@ time {
 	height: 20px;
 	position: relative;
 	width: 4px;
-	transition: .15s ease-in-out;
+	transition: transform .15s ease-in-out, background .15s ease-in-out;
 }
 
 #plus:after {
@@ -75,7 +78,7 @@ time {
 	position: absolute;
 	top: 8px;
 	width: 20px;
-	transition: .15s ease-in-out;
+	transition: transform .15s ease-in-out, background .15s ease-in-out;
 }
 
 #blog_feed {
@@ -109,8 +112,9 @@ time {
 }
 
 #nav_links {
+	font-size:20px;
 	text-align: center;
-	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out, font-size 0s ease-in-out;
+	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out, font-size 0s;
 	opacity: 0%;
 	max-height: 0px;
 	margin:0;
@@ -144,19 +148,19 @@ time {
 		flex-direction:column;
 	}
 	time {
-		order:1;
+		order: 1;
 		font-size: 16px;
 		line-height: 24px;
 	}
 	.blog_title {
-		order:2;
+		order: 2;
 		padding-bottom: 4px;
 		padding-top: 1px;
 		line-height: 24px;
 	}
 	.blog_brief {
 		padding:0px;
-		line-height: 26px;
+		line-height: 25px;
 	}
 	.blog_post {
 		margin-bottom: 40px;
@@ -173,10 +177,22 @@ time {
 	}
 	#nav_links {
 		font-size: 18px;
-		transition: opacity .15s, max-height .15s, font-size 0s;
 	}
 	#breadcrumb_container {
 		margin-bottom: 30px;
+	}
+	#breadcrumbs {
+		font-size: 22px;
+	}
+	#plus {
+		height: 18px;
+		width: 4px;
+	}
+	#plus:after {
+		height: 4px;
+		left: -7px;
+		top: 7px;
+		width: 18px;
 	}
 	#blog_feed {
 		padding-top: 30px;
