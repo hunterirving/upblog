@@ -38,7 +38,7 @@ time {
 	display: inline;
 }
 
-#plus_box{
+#plus_box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,9 +46,8 @@ time {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	font-size: 40px;
-	font-weight: 900;
-	font-family: 'Times New Roman', Times, serif;
+	margin-top:auto;
+	margin-bottom:auto;
 }
 
 @media(any-hover: hover) and (any-pointer: fine) {
@@ -111,7 +110,7 @@ time {
 
 #nav_links {
 	text-align: center;
-	transition: opacity .15s, max-height .15s, font-size 0s;
+	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out, font-size 0s ease-in-out;
 	opacity: 0%;
 	max-height: 0px;
 	margin:0;
