@@ -49,7 +49,7 @@ a {
 	transition: color ease-in-out .15s;
 }
 
-@media(hover: hover) and (pointer: fine) {
+@media(any-hover: hover) and (any-pointer: fine) {
 	a:hover {
 		color: var(--highlight);
 		transition: color ease-in-out .15s;
