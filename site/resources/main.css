@@ -19,6 +19,7 @@ body {
 	background-color: var(--background);
 	color: var(--text);
 	-webkit-tap-highlight-color: transparent;
+	transition: color ease-in-out .15s, background-color ease-in-out .15s;
 }
 
 h1 {

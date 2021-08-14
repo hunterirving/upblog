@@ -51,11 +51,10 @@ time {
 	font-family: 'Times New Roman', Times, serif;
 }
 
-@media(hover: hover) and (pointer: fine) {
+@media(any-hover: hover) and (any-pointer: fine) {
 	#plus_box:hover #plus {
 		background: var(--highlight);
 	}
-
 	#plus_box:hover #plus:after {
 		background: var(--highlight);
 	}

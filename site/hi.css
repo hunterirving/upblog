@@ -20,12 +20,6 @@ h4 {
 	padding: 0;
 }
 
-li a {
-	display: inline-block;
-	width:100%;
-	line-height: 32px;
-}
-
 #page_container {
 	padding-left: 50px;
 	padding-right: 50px;
@@ -49,28 +43,24 @@ li a {
 	flex-direction: row;
 	font-size: 23px;
 	font-weight: 600;
-	margin:0;
+	justify-content: space-between;
 }
 
-.nav_element {
-	vertical-align:top;
-	padding-right:90px;
+li a {
+	line-height: 32px;
+	display:flex;
 }
 
 #hidden_break {
 	display:none;
 }
 
-#Contact {
-	padding-right:20px;
-}
-
-@media only screen and (max-width: 700px)  {
+@media only screen and (max-width: 700px) {
 	#hi {
-			margin-top: 50px;
+		margin-top: 50px;
 	}
 	#nav {
-		flex-direction: column;
+		display:inline-block;
 	}
 	#hidden_break {
 		display:block;
