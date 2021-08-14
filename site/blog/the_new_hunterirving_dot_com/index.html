@@ -16,9 +16,10 @@
 		<!-- import css !-->
 		<link rel="stylesheet" type="text/css" href="../../resources/main.css">
 		<link rel="stylesheet" type="text/css" href="../blog.css">
-		<script src="../blog.js"></script>
+    <script type="text/javascript" src="../blog.js"></script>
+		<script type="text/javascript" src="../../resources/main.js"></script>
 	</head>
-	<body>
+	<body onload="insert_html('./../nav_links_embed.htm', 'nav_links');">
     <div id="page_container" class="centered noselect">
 			<div id="breadcrumb_container">
 				<h2 id="breadcrumbs"><a href="../../">hi</a> / <a href="../">blog</a> / Aug 14, '21</h2>
@@ -28,7 +29,7 @@
 			</div>
 			<nav>
 				<h3 id="nav_links" class="hidden">
-					<a href="">gobbler</a>, <a href="">huntergram</a>, <a href="">whetstone</a>, <a href="">kB</a>, <a href="">forte</a>, <a href="">email</a>
+          <!-- populated with contents of nav_links_embed.htm onload !-->
 				</h3>
 			</nav>
     </div>
