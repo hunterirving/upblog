@@ -25,18 +25,29 @@ time {
 	font-size: 18px;
 }
 
-#breadcrumb_container {
-	display: flex;
-	justify-content:space-between;
-	margin-bottom: 45px;
-}
-
 #breadcrumbs {
 	font-size: 25px;
 	font-weight: 700;
 	padding:0px;
 	margin:0px;
 	display: inline;
+}
+
+#breadcrumb_container {
+	display: flex;
+	justify-content:space-between;
+
+}
+
+#nav_links {
+	font-size:20px;
+	margin:0px;
+	text-align: center;
+	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out;/*, padding-bottom .15s ease-in-out;*/
+	opacity: 0%;
+	max-height: 0px;
+	padding-top: 35px;
+	padding-bottom: 50px;
 }
 
 #plus_box {
@@ -54,11 +65,9 @@ time {
 @media(any-hover: hover) and (any-pointer: fine) {
 	#plus_box:hover #plus {
 		background: var(--highlight);
-
 	}
 	#plus_box:hover #plus:after {
 		background: var(--highlight);
-
 	}
 }
 
@@ -79,10 +88,6 @@ time {
 	top: 8px;
 	width: 20px;
 	transition: transform .15s ease-in-out, background .15s ease-in-out;
-}
-
-#blog_feed {
-	padding-top: 60px;
 }
 
 .blog_post {
@@ -111,16 +116,6 @@ time {
 	pointer-events: none;
 }
 
-#nav_links {
-	font-size:20px;
-	text-align: center;
-	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out, font-size 0s;
-	opacity: 0%;
-	max-height: 0px;
-	margin:0;
-	padding:0;
-}
-
 @media only screen and (max-width: 1130px) {
 	#page_container {
 		padding-top: 50px;
@@ -130,9 +125,7 @@ time {
 @media only screen and (max-width: 870px)  {
 	#nav_links {
 		text-align: left;
-	}
-	#blog_feed {
-		padding-top: 45px;
+		padding-bottom: 35px;
 	}
 }
 
@@ -165,7 +158,6 @@ time {
 	.blog_post {
 		margin-bottom: 40px;
 	}
-
 }
 
 @media only screen and (max-width: 600px)  {
@@ -175,26 +167,5 @@ time {
 		padding-top:20px;
 		padding-bottom:60px;
 	}
-	#nav_links {
-		font-size: 18px;
-	}
-	#breadcrumb_container {
-		margin-bottom: 30px;
-	}
-	#breadcrumbs {
-		font-size: 22px;
-	}
-	#plus {
-		height: 18px;
-		width: 4px;
-	}
-	#plus:after {
-		height: 4px;
-		left: -7px;
-		top: 7px;
-		width: 18px;
-	}
-	#blog_feed {
-		padding-top: 30px;
-	}
+
 }
