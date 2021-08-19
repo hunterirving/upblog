@@ -11,6 +11,7 @@
 	--rose: #ff3399;
 	--tomatosoup: #FF6347;
 	--forest: #3CB371;
+	--grape: #370fff;
 }
 
 body {
@@ -50,11 +51,8 @@ a {
 	transition: color ease-in-out .15s;
 }
 
-@media(any-hover: hover) and (any-pointer: fine) {
-	a:hover {
-		color: var(--highlight);
-		transition: color ease-in-out .15s;
-	}
+#loading_cursor {
+
 }
 
 .noselect {
@@ -68,7 +66,15 @@ a {
 }
 
 .centered {
+	display: block;
   margin: 0 auto;
+}
+
+@media(any-hover: hover) and (any-pointer: fine) {
+	a:hover {
+		color: var(--highlight);
+		transition: color ease-in-out .15s;
+	}
 }
 
 /* Dark mode by default, use light mode when preferred */

@@ -2,6 +2,7 @@ body {
 	max-width: 100%;
 	min-height: 100%;
 	margin:0;
+	overflow-y: scroll;
 }
 
 #page_container {
@@ -20,6 +21,38 @@ body {
 	font-weight: bold;
 }
 
+#blog_heading {
+	margin-top:-5px;
+	margin-bottom:0px;
+	font-size: 35px;
+}
+
+.blog_subheading {
+	font-size: 25px;
+	margin-bottom:15px;
+	margin-top:55px;
+}
+
+#blog_feed {
+	padding-top:20px;
+}
+
+.full_width {
+	width:100%;
+}
+
+#blog_content {
+	font-size: 20px;
+	line-height: 29px;
+	padding:0px;
+	margin:0px;
+}
+
+#blog_content p {
+	margin-top:0px;
+	margin-bottom:20px;
+}
+
 time {
 	line-height: 29px;
 	font-size: 18px;
@@ -36,18 +69,17 @@ time {
 #breadcrumb_container {
 	display: flex;
 	justify-content:space-between;
-
 }
 
 #nav_links {
 	font-size:20px;
 	margin:0px;
 	text-align: center;
-	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out;/*, padding-bottom .15s ease-in-out;*/
+	transition: color .15s ease-in-out, opacity .15s ease-in-out, max-height .15s ease-in-out;
 	opacity: 0%;
 	max-height: 0px;
-	padding-top: 35px;
-	padding-bottom: 50px;
+	padding-top: 40px;
+	padding-bottom:40px;
 }
 
 #plus_box {
@@ -116,23 +148,42 @@ time {
 	pointer-events: none;
 }
 
-@media only screen and (max-width: 1130px) {
+img {
+	padding-bottom:55px;
+	padding-top:55px;
+	max-width:100%;
+}
+
+hr {
+	margin-top: 55px;
+	margin-bottom: 55px;
+	color: white;
+	width: 60%;
+}
+
+
+@media only screen and (max-width: 1124px) {
 	#page_container {
 		padding-top: 50px;
+	}
+	#blog_feed {
+		padding-top:10px;
 	}
 }
 
 @media only screen and (max-width: 870px)  {
 	#nav_links {
 		text-align: left;
-		padding-bottom: 35px;
+	}
+	#blog_feed {
+		padding-top:0px;
 	}
 }
 
 @media only screen and (max-width: 750px)  {
 	.blog_post {
 		display: inline-block;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		font-size: 18px;
 	}
 	.blog_details {
@@ -155,9 +206,6 @@ time {
 		padding:0px;
 		line-height: 25px;
 	}
-	.blog_post {
-		margin-bottom: 40px;
-	}
 }
 
 @media only screen and (max-width: 600px)  {
@@ -167,5 +215,16 @@ time {
 		padding-top:20px;
 		padding-bottom:60px;
 	}
-
+	#nav_links {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+	img {
+		padding-bottom:25px;
+		padding-top:25px;
+	}
+	.blog_subheading {
+		margin-top:40px;
+		margin-bottom: 5px;
+	}
 }
