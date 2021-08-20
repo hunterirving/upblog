@@ -30,7 +30,7 @@ body {
 	padding-right:16px;
 	padding-top:12px;
 	padding-bottom:0px;
-	margin-bottom:16px;
+	margin-bottom:0px;
 	border-bottom: 1px solid var(--border);
 }
 
@@ -198,9 +198,73 @@ body {
 
 #profile_photo {
 	border-radius:50%;
+	border: 2px solid var(--pure_black);
 	width: 22%;
 	min-width:90px;
 	position:absolute;
 	left:0;
 	bottom:0;
+}
+
+.gobble {
+	border-bottom: 1px solid var(--border);
+	padding-top:12px;
+	padding-left:16px;
+	display: flex;
+	flex-direction: row;
+	padding-right:12px;
+}
+
+.gobble_inner {
+
+}
+
+.lil_profile_photo {
+	border-radius:50%;
+	height: 48px;
+	margin-right: 12px;
+}
+
+.lil_verified_icon {
+	width:17px;
+	height:17px;
+	fill:var(--light_text);
+	display:inline;
+	float: left;
+	margin-left:3px;
+	margin-top:2.25px;
+	margin-right:4px;
+}
+
+.lil_verified_icon svg {
+	width:17px;
+}
+
+break{
+  flex-basis: 100%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.dot {
+	padding-left: 4px;
+	padding-right: 4px;
+	font-weight: 600;
+}
+
+.ellipses {
+	width:17px;
+	height:17px;
+	fill:var(--dark_text);
+	margin-top:1.5px;
+	margin-left:auto;
+}
+
+.ellipses svg {
+	width:17px;
+}
+
+.gobble_content {
+
 }
