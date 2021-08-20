@@ -16,6 +16,9 @@
 		<!-- import css !-->
 		<link rel="stylesheet" type="text/css" href="../resources/main.css">
 		<link rel="stylesheet" type="text/css" href="gobbler.css">
+		<!-- import js !-->
+		<script type="text/javascript" src="gobbler.js"></script>
+		<script type="text/javascript" src="../../resources/main.js"></script>
 	</head>
 	<body>
 		<div id="page_container" class="centered noselect">
@@ -23,7 +26,7 @@
 			<div id="bio_container">
 				<div id="follow_container">
 					<img id="profile_photo" src="resources/profile_photo.jpg">
-					<div id="follow_button">
+					<div id="follow_button" onclick="incrementValue('follow_count')">
 						Follow
 					</div>
 				</div>
@@ -76,6 +79,20 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Begin gobble section !-->
+			<div class="gobble">
+
+			</div>
+
+			<div class="gobble">
+
+			</div>
+
+			<div class="gobble">
+
+			</div>
+
 		</div>
 	</body>
 </html>
