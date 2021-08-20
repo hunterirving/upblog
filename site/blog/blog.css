@@ -228,3 +228,19 @@ hr {
 		margin-bottom: 5px;
 	}
 }
+
+@media(any-hover: hover) and (any-pointer: fine) {
+	a:hover {
+		color: var(--highlight);
+		transition: color ease-in-out .15s;
+	}
+}
+
+/* Dark mode by default, use light mode when preferred */
+@media (prefers-color-scheme: light) {
+	:root {
+		--text: #000000;
+		--background: #ffffff;
+	  --highlight: #370fff;
+	}
+}

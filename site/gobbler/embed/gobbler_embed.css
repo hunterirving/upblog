@@ -53,6 +53,27 @@
 	text-decoration: none;
 }
 
+
+
+#gobbler_embed .verified_icon {
+	fill: #1da1f2;
+	height: 14px;
+	margin-left: 3px;
+	margin-bottom: -2px;
+
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#gobbler_embed .username {
+	color: #5b7083;
+	font-size: 14px;
+	line-height:12px;
+}
+
 #gobbler_embed .display_name {
 	font-size:14px;
 	line-height:12px;
@@ -60,19 +81,6 @@
 	font-weight: 600;
 	text-decoration: none;
 	color:black;
-}
-
-#gobbler_embed .verified_icon {
-	fill: #1da1f2;
-	height: 14px;
-	margin-left: 3px;
-	margin-bottom: -2px;
-}
-
-#gobbler_embed .username {
-	color: #5b7083;
-	font-size: 14px;
-	line-height:12px;
 }
 
 #gobbler_embed .gobble {
