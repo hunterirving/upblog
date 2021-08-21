@@ -111,7 +111,7 @@
 						just setting up my gobbler
 					</div>
 					<div class="gobble_inner_3">
-						<div class="action_area comment">
+						<div class="action_area comment" onclick="incrementActionCount(event)">
 							<span class="action_icon">
 								<div class="action_icon_glow">
 								</div>
@@ -126,7 +126,7 @@
 								12
 							</span>
 						</div>
-						<div class="action_area regobble" onclick="flipGobble(event)">
+						<div class="action_area regobble" onclick="flipGobble(event); incrementActionCount(event)">
 							<span class="action_icon">
 								<div class="action_icon_glow">
 								</div>
@@ -141,7 +141,7 @@
 								12
 							</span>
 						</div>
-						<div class="action_area like">
+						<div class="action_area like" onclick="incrementActionCount(event)">
 							<span class="action_icon">
 								<div class="action_icon_glow">
 								</div>

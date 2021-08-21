@@ -3,7 +3,7 @@ var z = 0;
 function flipGobble(event)
 {
 	var gobble = findAncestor(event.target, 'gobble');
-	var return_to_top_icon = gobble.getElementsByClassName('return_to_top')[0]
+	var return_to_top_icon = gobble.getElementsByClassName('return_to_top')[0];
 
 	z ++;
 	gobble.style.zIndex = z;
@@ -32,4 +32,14 @@ function incrementValue(element_id)
     value = isNaN(value) ? 0 : value;
     value++;
     document.getElementById(element_id).innerHTML = value;
+}
+
+function incrementActionCount(event)
+{
+	var action_area = findAncestor(event.target, 'action_area');
+	var action_count = action_area.getElementsByClassName('action_count')[0];
+	var value = parseInt(action_count.innerHTML, 10);
+	value = isNaN(value) ? 0 : value;
+	value++;
+	action_count.innerHTML = value;
 }
