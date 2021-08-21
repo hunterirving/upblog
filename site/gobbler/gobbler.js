@@ -1,6 +1,6 @@
-function flipGobble()
+function flipGobble(event)
 {
-	var element = document.getElementById("gobbler_embed");
+	var element = findAncestor(event.target, 'gobble');
 	if (element.style.transform === '')
 	{
 		element.style.transform = "rotate(0.5turn)";
@@ -10,6 +10,11 @@ function flipGobble()
 		turnAmount = parseFloat(element.style.transform.slice(7).slice(0, -5)) + 0.5;
 		element.style.transform = `rotate(${turnAmount}turn)`;
 	}
+}
+
+function findAncestor (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
 }
 
 function incrementValue(element_id)

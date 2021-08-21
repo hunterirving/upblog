@@ -185,6 +185,7 @@ hr {
 		display: inline-block;
 		margin-bottom: 40px;
 		font-size: 18px;
+		min-width: 100%;
 	}
 	.blog_details {
 		padding: 0px;
