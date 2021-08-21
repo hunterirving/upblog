@@ -14,6 +14,7 @@ body {
 	margin:0px;
 	padding:0px;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	background-color: var(--pure_black);
 }
 
@@ -175,6 +176,9 @@ body {
 		transition: 0.2s ease-in-out;
 		cursor: pointer;
 	}
+	.action_area:hover {
+		cursor: pointer;
+	}
 }
 
 #cover_photo {
@@ -208,7 +212,9 @@ body {
 	display: flex;
 	flex-direction: row;
 	padding-right:16px;
-	transition: transform 0.5s ease;
+	transition: transform 1s ease-in-out;
+	z-index: 0;
+	position: relative;
 }
 
 .gobble_inner {
@@ -253,7 +259,7 @@ body {
 }
 
 .return_to_top {
-
+	transition: transform 1s ease-in-out;
 }
 
 .action_area {

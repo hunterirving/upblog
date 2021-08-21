@@ -1,14 +1,23 @@
+var z = 0;
+
 function flipGobble(event)
 {
-	var element = findAncestor(event.target, 'gobble');
-	if (element.style.transform === '')
+	var gobble = findAncestor(event.target, 'gobble');
+	var return_to_top_icon = gobble.getElementsByClassName('return_to_top')[0]
+
+	z ++;
+	gobble.style.zIndex = z;
+
+	if (gobble.style.transform === '')
 	{
-		element.style.transform = "rotate(0.5turn)";
+		gobble.style.transform = "rotate(0.5turn)";
+		return_to_top_icon.style.transform = "rotate(-0.5turn)";
 	}
 	else
 	{
-		turnAmount = parseFloat(element.style.transform.slice(7).slice(0, -5)) + 0.5;
-		element.style.transform = `rotate(${turnAmount}turn)`;
+		turnAmount = parseFloat(gobble.style.transform.slice(7).slice(0, -5)) + 0.5;
+		gobble.style.transform = `rotate(${turnAmount}turn)`;
+		return_to_top_icon.style.transform = `rotate(-${turnAmount}turn)`;
 	}
 }
 
