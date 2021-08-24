@@ -5,7 +5,18 @@
 	--pure_black: #000000;
 	--follow_dim: #e7e7e7;
 	--border: #2f3336;
-	--link: #1da1f2;
+
+	--light_blue: rgb(29, 161, 242);
+	--light_blue_hover: rgb(29, 161, 242, 0.12);
+	--light_blue_click: rgb(29, 161, 242, 0.19);
+
+	--light_green: rgb(23, 191, 99);
+	--light_green_hover: rgb(23, 191, 99, 0.12);
+	--light_green_click: rgb(23, 191, 99, 0.19);
+
+	--light_red: rgb(224, 36, 94);
+	--light_red_hover: rgb(224, 36, 94, 0.12);
+	--light_red_click: rgb(224, 36, 94, 0.19);
 }
 
 html {
@@ -137,12 +148,11 @@ body {
 	fill:var(--dark_text);
 	display:inline;
 	float:left;
-	margin-top:1px;
 }
 
 #website_url {
 	padding-left: 4px;
-	color: var(--link);
+	color: var(--light_blue);
 }
 
 #joined_container {
@@ -154,7 +164,6 @@ body {
 	fill: var(--dark_text);
 	display: inline;
 	float: left;
-	margin-top: 1px;
 	padding-right: 4px;
 }
 
@@ -172,18 +181,100 @@ body {
 }
 
 @media(any-hover: hover) and (any-pointer: fine) {
-	a:hover {
+	#link_container:hover {
 		text-decoration: underline;
-		text-decoration-color: var(--link);
+		text-decoration-color: var(--light_blue);
+		cursor: pointer;
 	}
 	#follow_button:hover {
 		background-color: var(--follow_dim);
 		transition: 0.2s ease-in-out;
 		cursor: pointer;
 	}
-	.action_area:hover {
+	.action_area *:hover {
 		cursor: pointer;
 	}
+	/*blue*/
+	.blue_hover:hover .action_icon_glow {
+		background-color: var(--light_blue_hover);
+		transition: 0.2s;
+	}
+	.blue_hover:hover .action_icon {
+		fill: var(--light_blue);
+		transition: 0.2s;
+	}
+	.blue_hover:hover .action_count {
+		color: var(--light_blue);
+		transition: 0.2s;
+	}
+	/*green*/
+	.green_hover:hover .action_icon_glow {
+		background-color: var(--light_green_hover);
+		transition: 0.2s;
+	}
+	.green_hover:hover .action_icon {
+		fill: var(--light_green);
+		transition: 0.2s;
+	}
+	.green_hover:hover .action_count {
+		color: var(--light_green);
+		transition: 0.2s;
+	}
+	/*red*/
+	.red_hover:hover .action_icon_glow {
+		background-color: var(--light_red_hover);
+		transition: 0.2s;
+	}
+	.red_hover:hover .action_icon {
+		fill: var(--light_red);
+		transition: 0.2s;
+	}
+	.red_hover:hover .action_count {
+		color: var(--light_red);
+		transition: 0.2s;
+	}
+}
+
+/*handle onclick highlight effects*/
+
+/*blue*/
+.blue_hover:active .action_icon_glow {
+	background-color: var(--light_blue_click);
+	transition: 0.2s;
+}
+.blue_hover:active .action_icon {
+	fill: var(--light_blue);
+	transition: 0.2s;
+}
+.blue_hover:active .action_count {
+	color: var(--light_blue);
+	transition: 0.2s;
+}
+/*green*/
+.green_hover:active .action_icon_glow {
+	background-color: var(--light_green_click);
+	transition: 0.2s;
+}
+.green_hover:active .action_icon {
+	fill: var(--light_green);
+	transition: 0.2s;
+}
+.green_hover:active .action_count {
+	color: var(--light_green);
+	transition: 0.2s;
+}
+/*red*/
+.red_hover:active .action_icon_glow {
+	background-color: var(--light_red_click);
+	transition: 0.2s;
+}
+.red_hover:active .action_icon {
+	fill: var(--light_red);
+	transition: 0.2s;
+}
+.red_hover:active .action_count {
+	color: var(--light_red);
+	transition: 0.2s;
 }
 
 #cover_photo {
@@ -251,18 +342,6 @@ body {
 	padding-bottom:12px;
 }
 
-.comment {
-
-}
-
-.regobble {
-
-}
-
-.like {
-
-}
-
 .return_to_top {
 	transition: transform 1s ease-in-out;
 }
@@ -275,6 +354,7 @@ body {
 .action_icon {
 	width:18.75px;
 	fill:var(--dark_text);
+	transition: 0.2s;
 }
 
 .action_icon_glow {
@@ -284,6 +364,7 @@ body {
 	position:absolute;
 	border-radius:50%;
 	z-index:-1;
+	transition: 0.2s;
 }
 
 .action_count {
@@ -293,6 +374,8 @@ body {
 	padding-left: 12px;
 	padding-right: 12px;
 	color: var(--dark_text);
+	text-decoration: none;
+	transition: 0.2s;
 }
 
 .lil_profile_photo {
