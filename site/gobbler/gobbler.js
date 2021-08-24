@@ -133,7 +133,7 @@ function appendGobbles() {
 		instance.querySelector('.regobble_count').innerHTML = gobble.regobbles;
 		instance.querySelector('.like_count').innerHTML = gobble.likes;
 
-    // Append the instance ot the DOM
+    // Append the instance to the DOM
     gobble_container.appendChild(instance);
   });
 }
