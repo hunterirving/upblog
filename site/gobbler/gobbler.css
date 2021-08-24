@@ -308,7 +308,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	padding-right:16px;
-	transition: transform 1s ease-in-out;
+	transition: transform 0.8s ease-in-out;
 	z-index: 0;
 	position: relative;
 }
@@ -343,7 +343,7 @@ body {
 }
 
 .return_to_top {
-	transition: transform 1s ease-in-out;
+	transition: transform 0.8s ease-in-out;
 }
 
 .action_area {

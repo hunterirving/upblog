@@ -54,7 +54,7 @@ function sendMessage(event)
 	var s = rot("uha" + "gre" + "veivat");
 	var ext = rot("p" + "bz");
 	var at = rot("@");
-	var su = rot("f" + "how" + "rpg")
+	var su = rot("f" + "how" + "rpg");
 	window.location.replace(ml2 + h + at + s + "." + ext + "?" + su + "=RE: \"" + gobble_text + "\"");
 }
 
@@ -64,4 +64,81 @@ function rot(str) {
   var index     = x => input.indexOf(x);
   var translate = x => index(x) > -1 ? output[index(x)] : x;
   return str.split('').map(translate).join('');
+}
+
+const gobbles = [
+	{
+		body: 'what\'s good homies??',
+		datetime: '2021-08-24T15:34:10.654Z',
+		comments: '2',
+		regobbles: '3',
+		likes: '4'
+	},
+	{
+		body: 'just setting up my gobbler',
+		datetime: '2021-08-23T15:34:10.654Z',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	},
+	{
+		body: 'absolutely gutted',
+		datetime: '2021-08-23T15:34:10.654Z',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	},
+	{
+		body: 'i can\'t believe you\'ve done this',
+		datetime: '2021-08-23T15:34:10.654Z',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	},
+	{
+		body: 'hello hullo hallo',
+		datetime: '2021-08-23T15:34:10.654Z',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	},
+	{
+		body: 'yeah!',
+		datetime: '2021-08-23T15:34:10.654Z',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	},
+	{
+		body: 'love that for you',
+		datetime: '2021-08-23T15:34:10.654Z',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	}
+];
+
+function appendGobbles() {
+  const gobble_container = document.getElementById('gobble_container');
+  const fragment = document.getElementById('gobble_template');
+
+  // Loop over the gobbles and modify the given template
+  gobbles.forEach(gobble => {
+    // Create an instance of the template content
+    const instance = document.importNode(fragment.content, true);
+    // Add relevant content to the template
+    instance.querySelector('.gobble_inner_2').innerHTML = gobble.body;
+    instance.querySelector('.date').innerHTML = gobble.datetime;
+		instance.querySelector('.comment_count').innerHTML = gobble.comments;
+		instance.querySelector('.regobble_count').innerHTML = gobble.regobbles;
+		instance.querySelector('.like_count').innerHTML = gobble.likes;
+
+    // Append the instance ot the DOM
+    gobble_container.appendChild(instance);
+  });
+}
+
+function convertDatetime()
+{
+
 }
