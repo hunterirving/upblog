@@ -35,13 +35,12 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-color: var(--pure_black);
-	transform: background-color 0.2s, border-color 0.2s;
+	transition: 0.2s;
 }
 
 #page_container {
 	max-width: 600px;
 	padding-bottom:0px;
-
 }
 
 #bio_container {
@@ -53,6 +52,7 @@ body {
 	border-bottom: 1px solid var(--border);
 	border-left: 1px solid var(--border);
 	border-right: 1px solid var(--border);
+	transition: 0.2s;
 }
 
 #follow_container {
@@ -89,6 +89,7 @@ body {
 	display:inline;
 	float:left;
 	margin-top:3px;
+	transition: 0.2s;
 }
 
 #username {
@@ -100,6 +101,7 @@ body {
 	position:relative;
 	top:-3px;
 	margin-bottom:7px;
+	transition: 0.2s;
 }
 
 #bio_text {
@@ -108,6 +110,7 @@ body {
 	font-weight:400;
 	line-height:20px;
 	margin-bottom:12px;
+	transition: 0.2s;
 }
 
 .thin_text {
@@ -115,6 +118,7 @@ body {
 	font-weight: 400;
 	line-height: 20px;
 	color: var(--dark_text);
+	transition: 0.2s;
 }
 
 .thick_text {
@@ -122,6 +126,7 @@ body {
 	font-weight: 700;
 	line-height: 20px;
 	color: var(--light_text);
+	transition: 0.2s;
 }
 
 #verified_icon {
@@ -131,6 +136,7 @@ body {
 	float: left;
 	margin-left:3px;
 	margin-top:8px;
+	transition: 0.2s;
 }
 
 #link_and_joined_container {
@@ -152,6 +158,7 @@ body {
 	fill:var(--dark_text);
 	display:inline;
 	float:left;
+	transition: 0.2s;
 }
 
 #website_url {
@@ -161,6 +168,7 @@ body {
 
 #joined_container {
 	color: var(--dark_text);
+	transition: 0.2s;
 }
 
 #calendar_icon {
@@ -169,6 +177,7 @@ body {
 	display: inline;
 	float: left;
 	padding-right: 4px;
+	transition: 0.2s;
 }
 
 #follows_followed_by_container {
@@ -288,6 +297,7 @@ body {
 	padding:0;
 	border-left: 1px solid var(--border);
 	border-right: 1px solid var(--border);
+	transition: 0.2s;
 }
 
 #profile_photo {
@@ -298,21 +308,19 @@ body {
 	position:absolute;
 	left:0;
 	bottom:0;
+	transition: 0.2s;
 }
 
 .gobble {
 	background-color: var(--pure_black);
 	margin-top:-1px;
-	border-top: 1px solid var(--border);
-	border-bottom: 1px solid var(--border);
-	border-left: 1px solid var(--border);
-	border-right: 1px solid var(--border);
+	border: 1px solid var(--border);
 	padding-top:12px;
 	padding-left:16px;
 	display: flex;
 	flex-direction: row;
 	padding-right:16px;
-	transition: transform ease-in-out 0.8s, background-color 0.2s, color 0.2s;
+	transition: 0.2s color, 0.2s border, 0.2s background-color, 0.8s ease-in-out transform;
 	z-index: 0;
 	position: relative;
 }
@@ -334,6 +342,7 @@ body {
 	font-weight: 400;
 	line-height: 20px;
 	color: var(--light_text);
+	transition: 0.2s;
 }
 
 .gobble_inner_3 {
@@ -347,7 +356,7 @@ body {
 }
 
 .return_to_top {
-	transition: transform 0.8s ease-in-out;
+	transition: 0.2;
 }
 
 .action_area {
@@ -397,6 +406,7 @@ body {
 	margin-left:3px;
 	margin-top:2.25px;
 	margin-right:4px;
+	transition: 0.2s;
 }
 
 .dot {
@@ -411,24 +421,93 @@ body {
 	fill:var(--dark_text);
 	margin-top:1.5px;
 	margin-left:auto;
+	transition: 0.2s;
 }
 
 @media (prefers-color-scheme: light) {
-	:root {
-		--pure_black: var(--pure_white);
-		--dark_text: var(--bluish_grey);
-		--light_text: var(--off_black);
-		--follow_dim: #272230;
-		--border: #e3e6e6;
-	}
 	#verified_icon {
 		fill: var(--light_blue);
+		transition: 0.2s;
 	}
 	.lil_verified_icon {
 		fill: var(--light_blue);
+		transition: 0.2s;
 	}
 	#follow_button {
 		background-color: var(--off_black);
+		color: var(--pure_white);
+		transition: background-color 0.2s, color 0.2s;
 	}
-
+	.gobble {
+		background-color: var(--pure_white);
+		border: 1px solid #e3e6e6;
+		transition: 0.2s color, 0.2s border, 0.2s background-color, 0.8s ease-in-out transform;
+	}
+	#bio_container {
+		border-bottom: 1px solid #e3e6e6;
+		border-left: 1px solid #e3e6e6;
+		border-right: 1px solid #e3e6e6;
+		transition: 0.2s;
+	}
+	#cover_photo {
+		border-left: 1px solid #e3e6e6;
+		border-right: 1px solid #e3e6e6;
+		transition: 0.2s;
+	}
+	body {
+		background-color: var(--pure_white);
+		transition: 0.2s;
+	}
+	#display_name {
+		color: var(--off_black);
+		transition: 0.2s;
+	}
+	#username {
+		color: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	#bio_text {
+		color: var(--off_black);
+		transition: 0.2s;
+	}
+	.thin_text {
+		color: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	.thick_text {
+		color: var(--off_black);
+		transition: 0.2s;
+	}
+	#link_icon {
+		fill: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	#joined_container {
+		color: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	#calendar_icon {
+		fill: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	#profile_photo {
+		border-color: var(--pure_white);
+		transition 0.2s;
+	}
+	.gobble_inner_2 {
+		color: var(--off_black);
+		transition: 0.2s;
+	}
+	.action_icon {
+		color: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	.action_count {
+		color: var(--bluish_grey);
+		transition: 0.2s;
+	}
+	.ellipses {
+		fill: var(bluish_grey);
+		transition: 0.2s;
+	}
 }
