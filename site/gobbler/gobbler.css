@@ -3,7 +3,8 @@
 	--dark_text: #6e767d;
 	--pure_white: #FFFFFF;
 	--pure_black: #000000;
-	--follow_dim: #e7e7e7;
+	--follow_dim: #d7dbdc;
+	--follow_dimmer: #bfc2c3;
 	--border: #2f3336;
 
 	/* light mode */
@@ -207,6 +208,7 @@ body {
 	.action_area *:hover {
 		cursor: pointer;
 	}
+
 	/*blue*/
 	.blue_hover:hover .action_icon_glow {
 		background-color: var(--light_blue_hover);
@@ -220,19 +222,34 @@ body {
 		color: var(--light_blue);
 		transition: 0.2s;
 	}
+
 	/*green*/
-	.green_hover:hover .action_icon_glow {
+	/*mouse enter*/
+	.green_hover:not(.no_hover):hover .action_icon_glow {
 		background-color: var(--light_green_hover);
 		transition: 0.2s;
 	}
-	.green_hover:hover .action_icon {
+	.green_hover:not(.no_hover):hover .action_icon {
 		fill: var(--light_green);
 		transition: 0.2s;
 	}
-	.green_hover:hover .action_count {
+	.green_hover:not(.no_hover):hover .action_count {
 		color: var(--light_green);
 		transition: 0.2s;
 	}
+	/*after click fadeout*/
+	.green_hover:hover .action_icon_glow {
+		transition: 0.4s ease-in-out;
+	}
+	.green_hover:hover .action_icon {
+
+		transition: 0.4s ease-in-out;
+	}
+	.green_hover:hover .action_count {
+
+		transition: 0.4s ease-in-out;
+	}
+
 	/*red*/
 	.red_hover:hover .action_icon_glow {
 		background-color: var(--light_red_hover);
@@ -248,46 +265,52 @@ body {
 	}
 }
 
-/*handle onclick highlight effects*/
+/*handle onclick highlight effects - should come out instantly*/
 
 /*blue*/
 .blue_hover:active .action_icon_glow {
 	background-color: var(--light_blue_click);
-	transition: 0.2s;
+	transition: 0s;
 }
 .blue_hover:active .action_icon {
 	fill: var(--light_blue);
-	transition: 0.2s;
+	transition: 0s;
 }
 .blue_hover:active .action_count {
 	color: var(--light_blue);
-	transition: 0.2s;
+	transition: 0s;
 }
 /*green*/
-.green_hover:active .action_icon_glow {
+.green_hover:not(.no_hover):active .action_icon_glow {
 	background-color: var(--light_green_click);
-	transition: 0.2s;
+	transition: 0s;
 }
-.green_hover:active .action_icon {
+.green_hover:not(.no_hover):active .action_icon {
 	fill: var(--light_green);
-	transition: 0.2s;
+	transition: 0s;
 }
-.green_hover:active .action_count {
+.green_hover:not(.no_hover):active .action_count {
 	color: var(--light_green);
-	transition: 0.2s;
+	transition: 0s;
 }
+
 /*red*/
 .red_hover:active .action_icon_glow {
 	background-color: var(--light_red_click);
-	transition: 0.2s;
+	transition: 0s;
 }
 .red_hover:active .action_icon {
 	fill: var(--light_red);
-	transition: 0.2s;
+	transition: 0s;
 }
 .red_hover:active .action_count {
 	color: var(--light_red);
-	transition: 0.2s;
+	transition: 0s;
+}
+/*follow button*/
+#follow_button:active {
+	background-color: var(--follow_dimmer);
+	transition: 0s;
 }
 
 #cover_photo {
@@ -297,6 +320,7 @@ body {
 	padding:0;
 	border-left: 1px solid var(--border);
 	border-right: 1px solid var(--border);
+	box-sizing:border-box;
 	transition: 0.2s;
 }
 
@@ -312,6 +336,7 @@ body {
 }
 
 .gobble {
+	transition: 0.2s color, 0.2s border, 0.2s background-color, 0.8s ease-in-out transform;
 	background-color: var(--pure_black);
 	margin-top:-1px;
 	border: 1px solid var(--border);
@@ -320,7 +345,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	padding-right:16px;
-	transition: 0.2s color, 0.2s border, 0.2s background-color, 0.8s ease-in-out transform;
 	z-index: 0;
 	position: relative;
 }
@@ -356,7 +380,7 @@ body {
 }
 
 .return_to_top {
-	transition: 0.2;
+	transition: 0.8s ease-in-out transform;
 }
 
 .action_area {
@@ -425,6 +449,10 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
+	:root {
+		--follow_dim: #222c30;
+		--follow_dimmer: #3f4347;
+	}
 	#verified_icon {
 		fill: var(--light_blue);
 		transition: 0.2s;
@@ -439,9 +467,9 @@ body {
 		transition: background-color 0.2s, color 0.2s;
 	}
 	.gobble {
+		transition: 0.2s color, 0.2s border, 0.2s background-color, 0.8s ease-in-out transform;
 		background-color: var(--pure_white);
 		border: 1px solid #e3e6e6;
-		transition: 0.2s color, 0.2s border, 0.2s background-color, 0.8s ease-in-out transform;
 	}
 	#bio_container {
 		border-bottom: 1px solid #e3e6e6;

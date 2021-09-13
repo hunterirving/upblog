@@ -45,7 +45,7 @@
 						<span class="action_count comment_count">
 						</span>
 					</div>
-					<div class="action_area green_hover" onclick="flipGobble(event); incrementActionCount(event)">
+					<div class="action_area green_hover" onclick="flipGobble(event); incrementActionCount(event);" onmouseup="setTimeout(addNoHover(event), 3000);" onmousemove="removeNoHover(event);">
 						<span class="action_icon">
 							<div class="action_icon_glow">
 							</div>
@@ -180,7 +180,6 @@
 				-. style links inside gobbles blue
 				-. javascript to read from hidden html table to populate gobbles
 				-. (support for text-only browsers)
-				-. light mode transition
 				-. investigate regobble holding hover during/after transition
 
 			<!-- Holds gobbles created from template !-->

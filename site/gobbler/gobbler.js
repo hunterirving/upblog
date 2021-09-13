@@ -21,6 +21,18 @@ function flipGobble(event)
 	}
 }
 
+function addNoHover(event)
+{
+	green_hover = findAncestor(event.target, 'green_hover');
+	green_hover.classList.add("no_hover");
+}
+
+function removeNoHover(event)
+{
+	green_hover = findAncestor(event.target, 'green_hover');
+	green_hover.classList.remove("no_hover");
+}
+
 function incrementActionCount(event)
 {
 	var action_area = findAncestor(event.target, 'action_area');
