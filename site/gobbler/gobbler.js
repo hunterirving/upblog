@@ -80,6 +80,13 @@ function rot(str) {
 
 const gobbles = [
 	{
+		body: 'link: <a href="http://www.hunterirving.com">link</a>',
+		datetime: '2021-08-24T15:34:10.654Z',
+		comments: '2',
+		regobbles: '3',
+		likes: '4'
+	},
+	{
 		body: 'what\'s good homies??',
 		datetime: '2021-08-24T15:34:10.654Z',
 		comments: '2',
