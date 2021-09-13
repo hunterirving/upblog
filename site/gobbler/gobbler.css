@@ -205,7 +205,7 @@ body {
 		transition: 0.2s;
 		cursor: pointer;
 	}
-	.action_area *:hover {
+	.action_area.blue_hover, .action_area.red_hover *:hover {
 		cursor: pointer;
 	}
 
@@ -228,26 +228,30 @@ body {
 	.green_hover:not(.no_hover):hover .action_icon_glow {
 		background-color: var(--light_green_hover);
 		transition: 0.2s;
+		cursor: pointer;
 	}
 	.green_hover:not(.no_hover):hover .action_icon {
 		fill: var(--light_green);
 		transition: 0.2s;
+		cursor: pointer;
 	}
 	.green_hover:not(.no_hover):hover .action_count {
 		color: var(--light_green);
 		transition: 0.2s;
+		cursor: pointer;
 	}
 	/*after click fadeout*/
 	.green_hover:hover .action_icon_glow {
-		transition: 0.4s ease-in-out;
+		transition: 0.3s linear;
+		cursor: default;
 	}
 	.green_hover:hover .action_icon {
-
-		transition: 0.4s ease-in-out;
+		transition: 0.3s linear;
+		cursor: default;
 	}
 	.green_hover:hover .action_count {
-
-		transition: 0.4s ease-in-out;
+		transition: 0.3s linear;
+		cursor: default;
 	}
 
 	/*red*/
@@ -293,6 +297,7 @@ body {
 	color: var(--light_green);
 	transition: 0s;
 }
+
 
 /*red*/
 .red_hover:active .action_icon_glow {
