@@ -1,4 +1,5 @@
 var z = 0; //holds current highest z-index
+var pageLoadTime = Date.now();
 
 function flipGobble(event)
 {
@@ -19,6 +20,7 @@ function flipGobble(event)
 		gobble.style.transform = `rotate(${turnAmount}turn)`;
 		return_to_top_icon.style.transform = `rotate(-${turnAmount}turn)`;
 	}
+	console.log(datetimeToPlaceholder('Tue, 14 Sep 2021 16:32:35 GMT'));
 }
 
 function addNoHover(event)
@@ -81,56 +83,28 @@ function rot(str) {
 const gobbles = [
 	{
 		body: 'link: <a href="http://www.hunterirving.com">link</a>',
-		datetime: '2021-08-24T15:34:10.654Z',
+		datetime: 'Tue, 14 Sep 2021 16:32:35 GMT',
 		comments: '2',
 		regobbles: '3',
 		likes: '4'
 	},
 	{
+		body: 'absolutely gutted',
+		datetime: 'Tue, 13 Sep 2021 16:32:35 GMT',
+		comments: '2',
+		regobbles: '4',
+		likes: '42'
+	},
+	{
 		body: 'what\'s good homies??',
-		datetime: '2021-08-24T15:34:10.654Z',
+		datetime: 'Tue, 15 Sep 2020 16:32:35 GMT',
 		comments: '2',
 		regobbles: '3',
 		likes: '4'
 	},
 	{
 		body: 'just setting up my gobbler',
-		datetime: '2021-08-23T15:34:10.654Z',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	},
-	{
-		body: 'absolutely gutted',
-		datetime: '2021-08-23T15:34:10.654Z',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	},
-	{
-		body: 'i can\'t believe you\'ve done this',
-		datetime: '2021-08-23T15:34:10.654Z',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	},
-	{
-		body: 'hello hullo hallo',
-		datetime: '2021-08-23T15:34:10.654Z',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	},
-	{
-		body: 'yeah!',
-		datetime: '2021-08-23T15:34:10.654Z',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	},
-	{
-		body: 'love that for you',
-		datetime: '2021-08-23T15:34:10.654Z',
+		datetime: 'Tue, 14 Sep 2020 16:32:35 GMT',
 		comments: '2',
 		regobbles: '4',
 		likes: '42'
@@ -147,7 +121,7 @@ function appendGobbles() {
     const instance = document.importNode(fragment.content, true);
     // Add relevant content to the template
     instance.querySelector('.gobble_inner_2').innerHTML = gobble.body;
-    instance.querySelector('.date').innerHTML = gobble.datetime;
+    instance.querySelector('.date').innerHTML = datetimeToPlaceholder(gobble.datetime);
 		instance.querySelector('.comment_count').innerHTML = gobble.comments;
 		instance.querySelector('.regobble_count').innerHTML = gobble.regobbles;
 		instance.querySelector('.like_count').innerHTML = gobble.likes;
@@ -157,7 +131,22 @@ function appendGobbles() {
   });
 }
 
-function convertDatetime()
-{
-
+function datetimeToPlaceholder(dateString) {
+	millisSincePost = pageLoadTime - Date.parse(dateString);
+	if (millisSincePost > 31536000000){
+		//more than one year ago
+		return 'Ages ago';
+	}
+	else if (millisSincePost > 604800000){
+		//more than one week ago
+		return 'A while ago';
+	}
+	else if (millisSincePost > 86400000) {
+		//more than one day ago
+		return 'Recently';
+	}
+	else {
+		//not more than one day ago
+		return 'Today';
+	}
 }
