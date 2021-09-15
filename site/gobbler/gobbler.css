@@ -30,7 +30,7 @@ html {
 
 body {
 	max-width: 100%;
-	min-height: 100%;
+	min-height: 100vh;
 	margin:0px;
 	padding:0px;
 	overflow-y: scroll;
@@ -534,7 +534,7 @@ body {
 	}
 	#profile_photo {
 		border-color: var(--pure_white);
-		transition 0.2s;
+		transition: 0.2s;
 	}
 	.gobble_inner_2 {
 		color: var(--off_black);

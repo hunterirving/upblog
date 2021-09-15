@@ -1,6 +1,16 @@
 var z = 0; //holds current highest z-index
 var pageLoadTime = Date.now();
 
+function hidePrototypes()
+{
+	document.getElementById('prototype_container').style.display="none";
+}
+
+function showFollowButton()
+{
+	document.getElementById("follow_button").style.display = "block";
+}
+
 function flipGobble(event)
 {
 	var gobble = findAncestor(event.target, 'gobble');
@@ -20,7 +30,6 @@ function flipGobble(event)
 		gobble.style.transform = `rotate(${turnAmount}turn)`;
 		return_to_top_icon.style.transform = `rotate(-${turnAmount}turn)`;
 	}
-	console.log(datetimeToPlaceholder('Tue, 14 Sep 2021 16:32:35 GMT'));
 }
 
 function addNoHover(event)
@@ -80,55 +89,28 @@ function rot(str) {
   return str.split('').map(translate).join('');
 }
 
-const gobbles = [
-	{
-		body: 'link: <a href="http://www.hunterirving.com">link</a>',
-		datetime: 'Tue, 14 Sep 2021 16:32:35 GMT',
-		comments: '2',
-		regobbles: '3',
-		likes: '4'
-	},
-	{
-		body: 'absolutely gutted',
-		datetime: 'Tue, 13 Sep 2021 16:32:35 GMT',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	},
-	{
-		body: 'what\'s good homies??',
-		datetime: 'Tue, 15 Sep 2020 16:32:35 GMT',
-		comments: '2',
-		regobbles: '3',
-		likes: '4'
-	},
-	{
-		body: 'just setting up my gobbler',
-		datetime: 'Tue, 14 Sep 2020 16:32:35 GMT',
-		comments: '2',
-		regobbles: '4',
-		likes: '42'
-	}
-];
-
 function appendGobbles() {
   const gobble_container = document.getElementById('gobble_container');
   const fragment = document.getElementById('gobble_template');
 
-  // Loop over the gobbles and modify the given template
-  gobbles.forEach(gobble => {
-    // Create an instance of the template content
-    const instance = document.importNode(fragment.content, true);
-    // Add relevant content to the template
-    instance.querySelector('.gobble_inner_2').innerHTML = gobble.body;
-    instance.querySelector('.date').innerHTML = datetimeToPlaceholder(gobble.datetime);
-		instance.querySelector('.comment_count').innerHTML = gobble.comments;
-		instance.querySelector('.regobble_count').innerHTML = gobble.regobbles;
-		instance.querySelector('.like_count').innerHTML = gobble.likes;
+	//create an array of gobble_prototypes
+	var prototypes = document.getElementById('prototype_container').getElementsByClassName('gobble_prototype');
 
-    // Append the instance to the DOM
-    gobble_container.appendChild(instance);
-  });
+	//loop over gobble_prototypes
+	for (i=0; i < prototypes.length; i++) {
+		//create an instance of the template
+    const instance = document.importNode(fragment.content, true);
+		//inject data from prototype
+		instance.querySelector('.thick_text').innerHTML = 'hunter';
+		instance.querySelector('.thin_text').innerHTML = '@hunter<span class="dot">·</span><span class="date"></span>';
+		instance.querySelector('.gobble_inner_2').innerHTML = prototypes[i].querySelector('.gobble_proto_body').innerHTML;
+		instance.querySelector('.date').innerHTML = datetimeToPlaceholder(prototypes[i].querySelector('.gobble_proto_date').innerHTML);
+		instance.querySelector('.comment_count').innerHTML = prototypes[i].querySelector('.comments').innerHTML;
+		instance.querySelector('.regobble_count').innerHTML = prototypes[i].querySelector('.regobbles').innerHTML;
+		instance.querySelector('.like_count').innerHTML = prototypes[i].querySelector('.likes').innerHTML;
+		//append the modified instance to the DOM
+		gobble_container.appendChild(instance);
+	}
 }
 
 function datetimeToPlaceholder(dateString) {

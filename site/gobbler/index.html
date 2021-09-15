@@ -9,7 +9,6 @@
 			<div class="gobble_inner">
 				<div class="gobble_inner_1">
 					<span class="thick_text">
-						hunter
 					</span>
 					<span class="lil_verified_icon">
 						<svg viewBox="0 0 24 24">
@@ -19,7 +18,7 @@
 							</g>
 						</svg>
 					</span>
-					<span class="thin_text">@hunter<span class="dot">·</span><span class="date">Aug 11</span></span>
+					<span class="thin_text"></span>
 					<span class="action_area blue_hover ellipses">
 						<span class="action_icon">
 							<div class="action_icon_glow">
@@ -108,16 +107,16 @@
 		<link rel="stylesheet" type="text/css" href="gobbler.css">
 		<!-- import js !-->
 		<script type="text/javascript" src="gobbler.js"></script>
-
 	</head>
-	<body onload="appendGobbles()">
+
+	<body onload="hidePrototypes(); showFollowButton(); appendGobbles()">
 		<div id="page_container" class="centered noselect">
 			<!-- header / bio section !-->
 			<img id="cover_photo" src="resources/stonehenge.jpg"/>
 			<div id="bio_container">
 				<div id="follow_container">
 					<img id="profile_photo" src="resources/andonuts.jpg">
-					<div id="follow_button" onclick="incrementValue('follow_count')">
+					<div id="follow_button" style="display: none" onclick="incrementValue('follow_count')">
 						Follow
 					</div>
 				</div>
@@ -167,10 +166,89 @@
 					<div id="follows_followed_by_container">
 						<div id="follows"><span class="thin_text">Follows </span><span class="thick_text" style="padding-right:20px;">69</span></div>
 						<div id="followed_by"><span class="thin_text">Followed by </span><span id="follow_count" class="thick_text" style="padding-right:20px;">420</span></div>
-						<!--<div id="followed_by"><span class="thin_text">Total gobbles </span><span class="thick_text">1</span></div>!-->
 					</div>
 				</div>
 			</div>
+
+			<!-- fall back to a text-only version of the site when javascript is not available (for use with terminal web browsers like "Links") !-->
+			<div id="prototype_container">
+
+				<div class="gobble_prototype">
+					<hr>
+					<div>
+						@hunter
+					</div>
+					<div class="gobble_proto_body">
+						this is the body of a gobble, maybe. just testing out the html setup. i think this could work.
+					</div>
+					<div class="gobble_proto_date">
+						Tue, 13 Sep 2021 16:32:35 GMT
+					</div>
+					<div>
+						<span class="comments">3</span> comments,
+						<span class="regobbles">6</span> regobbles,
+						<span class="likes">4</span> likes
+					</div>
+				</div>
+
+				<div class="gobble_prototype">
+					<hr>
+					<div>
+						@hunter
+					</div>
+					<div class="gobble_proto_body">
+						yet another gobble! what's poppin, internet?
+					</div>
+					<div class="gobble_proto_date">
+						Tue, 13 Sep 2021 16:32:35 GMT
+					</div>
+					<div>
+						<span class="comments">31</span> comments,
+						<span class="regobbles">62</span> regobbles,
+						<span class="likes">64</span> likes
+					</div>
+				</div>
+
+				<div class="gobble_prototype">
+					<hr>
+					<div>
+						@hunter
+					</div>
+					<div class="gobble_proto_body">
+						twitter? me? not likely.
+					</div>
+					<div class="gobble_proto_date">
+						Tue, 13 Sep 2021 16:32:35 GMT
+					</div>
+					<div>
+						<span class="comments">31</span> comments,
+						<span class="regobbles">62</span> regobbles,
+						<span class="likes">64</span> likes
+					</div>
+				</div>
+
+				<div class="gobble_prototype">
+					<hr>
+					<div>
+						@hunter
+					</div>
+					<div class="gobble_proto_body">
+						listening to Hiroshi Yoshimura
+					</div>
+					<div class="gobble_proto_date">
+						Tue, 13 Sep 2021 16:32:35 GMT
+					</div>
+					<div>
+						<span class="comments">31</span> comments,
+						<span class="regobbles">62</span> regobbles,
+						<span class="likes">64</span> likes
+					</div>
+				</div>
+
+				<hr>
+			</div>
+
+
 
 			<!--
 				#TODO
