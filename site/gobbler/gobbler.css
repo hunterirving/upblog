@@ -485,6 +485,12 @@ body {
 		background-color: var(--pure_white);
 		border: 1px solid #e3e6e6;
 	}
+	@media(any-hover: hover) {
+		.gobble:hover {
+			background-color: #f7f7f7;
+			transition: 0.2s;
+		}
+	}
 	#bio_container {
 		border-bottom: 1px solid #e3e6e6;
 		border-left: 1px solid #e3e6e6;

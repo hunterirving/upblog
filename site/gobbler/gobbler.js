@@ -68,7 +68,7 @@ function incrementValue(element_id)
     document.getElementById(element_id).innerHTML = value;
 }
 
-function sendMessage(event)
+function commentOnGobble(event)
 {
 	var ancestor = findAncestor(event.target, 'gobble_inner');
 	var gobble_text = ancestor.getElementsByClassName('gobble_inner_2')[0].innerText;

@@ -90,6 +90,7 @@ li a {
 	a:hover {
 		color: var(--highlight);
 		transition: color ease-in-out .15s;
+		cursor: pointer;
 	}
 }
 
