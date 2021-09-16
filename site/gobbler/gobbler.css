@@ -488,7 +488,6 @@ body {
 	@media(any-hover: hover) {
 		.gobble:hover {
 			background-color: #f7f7f7;
-			transition: 0.2s;
 		}
 	}
 	#bio_container {

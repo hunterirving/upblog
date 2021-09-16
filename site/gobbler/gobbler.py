@@ -15,9 +15,9 @@ newGobble = '''
 					<div class="gobble_proto_date">''' + datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT") + '''
 					</div>
 					<div>
-						<span class="comments">''' + str(randint(10,99)) + '''</span> comments,
-						<span class="regobbles">''' + str(randint(10,99)) + '''</span> regobbles,
-						<span class="likes">''' + str(randint(10,99)) + '''</span> likes
+						<span class="comments">''' + str(randint(3,14)) + '''</span> comments,
+						<span class="regobbles">''' + str(randint(3,13)) + '''</span> regobbles,
+						<span class="likes">''' + str(randint(3,18)) + '''</span> likes
 					</div>
 				</div>
 '''
