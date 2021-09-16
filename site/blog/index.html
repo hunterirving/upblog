@@ -26,7 +26,7 @@
 	    </style>
 		</noscript>
 	</head>
-	<body onload="insert_html('./nav_links_embed.htm', 'nav_links');">
+	<body onload="populate_nav_links();">
 		<div id="page_container" class="centered noselect">
 			<div id="breadcrumb_container">
 				<h2 id="breadcrumbs"><a href="../">hi</a> / blog</h2>
@@ -36,7 +36,7 @@
 			</div>
 			<nav>
 				<h3 id="nav_links" class="hidden">
-					<!-- populated with contents of nav_links_embed.htm onload !-->
+					<!-- populated onload !-->
 				</h3>
 			</nav>
 			<div id="blog_feed">

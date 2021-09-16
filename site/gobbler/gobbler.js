@@ -97,7 +97,7 @@ function appendGobbles() {
 	var prototypes = document.getElementById('prototype_container').getElementsByClassName('gobble_prototype');
 
 	//loop over gobble_prototypes
-	for (i=0; i < prototypes.length; i++) {
+	for(i=0; i < prototypes.length; i++) {
 		//create an instance of the template
     const instance = document.importNode(fragment.content, true);
 		//inject data from prototype

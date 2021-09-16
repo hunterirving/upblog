@@ -1,3 +1,22 @@
+function populate_nav_links()
+{
+	fetch('../index.html' + '?v=' + Date.now())
+			.then(response => {
+					return response.text()
+			})
+			.then(data => {
+				var parser = new DOMParser();
+				var doc = parser.parseFromString(data, 'text/html');
+
+				var li_elements = doc.querySelectorAll('li');
+				for(i=0; i < li_elements.length - 1; i++) {
+					nav_links.innerHTML += li_elements[i].innerHTML + ", ";
+				}
+				nav_links.innerHTML += li_elements[li_elements.length - 1].innerHTML;
+
+			});
+}
+
 function toggleNavLinks()
 {
 	const isHidden = nav_links.classList.contains('hidden');
