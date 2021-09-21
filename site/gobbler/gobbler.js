@@ -1,5 +1,5 @@
 var z = 0; //holds current highest z-index
-var pageLoadTime = Date.now();
+var pageLoadTime = new Date();
 
 function hidePrototypes()
 {
@@ -114,21 +114,24 @@ function appendGobbles() {
 }
 
 function datetimeToPlaceholder(dateString) {
-	millisSincePost = pageLoadTime - Date.parse(dateString);
-	if (millisSincePost > 31536000000){
-		//more than one year ago
-		return 'Ages ago';
+	postTimeInLocalTime = new Date(dateString);
+	difInMillis =  pageLoadTime - postTimeInLocalTime;
+
+	/* today */
+	if(difInMillis < 86400000) {
+		return "Today";
 	}
-	else if (millisSincePost > 604800000){
-		//more than one week ago
-		return 'A while ago';
+	/* yesterday */
+	else if(difInMillis < 172800000) {
+		return "Yesterday";
 	}
-	else if (millisSincePost > 86400000) {
-		//more than one day ago
-		return 'Recently';
+	/* this week */
+	else if(difInMillis < 604800000) {
+		return "A Few Days Ago";
 	}
-	else {
-		//not more than one day ago
-		return 'Today';
+	/* more than a week, less than a year */
+	else if(difInMillis < 31536000000) {
+		return "A While Ago";
 	}
+	else return "Ages ago";
 }
