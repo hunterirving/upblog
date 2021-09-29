@@ -5,6 +5,11 @@ body {
 	overflow-y: scroll;
 }
 
+a {
+	color: var(--text);
+	transition: color ease-in-out .15s;
+}
+
 #page_container {
 	max-width: 1024px;
 	padding-left: 50px;
@@ -23,13 +28,13 @@ body {
 
 #blog_heading {
 	margin-top:-5px;
-	margin-bottom:0px;
+	margin-bottom:12px;
 	font-size: 35px;
 }
 
 .blog_subheading {
 	font-size: 25px;
-	margin-bottom:15px;
+	margin-bottom: 13px;
 	margin-top:55px;
 }
 
@@ -224,9 +229,16 @@ hr {
 		padding-bottom:25px;
 		padding-top:25px;
 	}
+	#blog_heading {
+		margin-bottom: 12px;
+		line-height: 36px;
+		font-size:30px;
+	}
 	.blog_subheading {
 		margin-top:40px;
-		margin-bottom: 5px;
+		margin-bottom: 6px;
+		line-height:29px;
+		font-size:22px;
 	}
 }
 

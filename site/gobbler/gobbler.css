@@ -39,6 +39,10 @@ body {
 	transition: 0.2s;
 }
 
+a {
+	text-decoration: none;
+}
+
 #page_container {
 	max-width: 600px;
 	padding-bottom:0px;
