@@ -1,11 +1,19 @@
-import os
+import os, glob, readline #pip install pyreadline (on windows)
 
 #eventually include push to github and push to AWS
 
 #markdown_filename = input('Markdown file name: ')
-markdown_filename = 'the_new_hunterirving_dot_com.md'
-markdown_file = open('markdown/' + markdown_filename, 'r')
-markdown_lines = markdown_file.readlines()
+
+def complete(text, state):
+    return (glob.glob(text+'*')+[None])[state]
+readline.set_completer_delims(' \t\n;')
+readline.parse_and_bind("tab: complete")
+readline.set_completer(complete)
+os.chdir('./markdown/')
+markdown_filename = input('Select markdown file: ')
+with open(markdown_filename, 'r') as markdown_file:
+	markdown_lines = markdown_file.readlines()
+os.chdir('../')
 
 blog_title = markdown_lines[0]
 blog_brief = markdown_lines[1]
@@ -37,7 +45,7 @@ for i in range(4, len(markdown_lines)):
 			i += 1
 
 #insert guts, date, and title into template
-print('Injecting generated html into template...')
+print('Injecting html into template...')
 html_buffer = '''<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -86,28 +94,50 @@ html_buffer = '''<!DOCTYPE html>
 </html>'''
 
 #write to file, overwriting if exists
-print('Writing html to \'' + directory_name + '/index.html\'...')
-with open(directory_name + '/index.html', 'w') as outfile:
-    outfile.write(html_buffer)
+print('Writing to \'' + directory_name + '/index.html\'...')
+with open(directory_name + '/index.html', 'w') as blog_post_html_file:
+	blog_post_html_file.write(html_buffer)
 
-quit()
+#build chunk
+chunk = '\t\t\t\t<a class="nodecor" href="./' + directory_name + '''">
+					<span class="blog_post">
+						<span class="blog_details">
+							<h3 class="blog_title">''' + blog_title[:-1] + '''</h3>
+							<time>''' + blog_date[:-1] + '''</time>
+						</span>
+						<span class="blog_brief">
+							''' + blog_brief[:-1]  + '''
+						</span>
+					</span>
+				</a>'''
 
-#serach for string <a href="./the_new_hunterirving_dot_com">
-with open('index.html', 'r') as blog_homepage:
-	if ('<a href="./' + directory_name + '">') in blog_homepage:
-		print('Link to \'../blog/' + directory_name + '\' already exists in blog/index.html.')
-		#if need to update title..? or desc, or date, do that and notify terminal
-	else:
-		print('Adding link to \'../blog/' + directory_name + '\' to blog/index.html...')
-		for line in blog_homepage:
-		    if '<div id="blog_feed">' in line:
-		        line = line.replace(line,line + '')
-		    print(line, end='')
+#read from file
+with open('./index.html', 'r') as file:
+    data = file.readlines()
 
+#search for existing chunk
+for i in range(len(data)):
+	if ('href="./' + directory_name + '">') in data[i]:
+		print('Found existing reference to \'blog/' + directory_name + '\' in blog/index.html.')
+		data[i] = chunk
+		for j in range(i+1, i+11):
+			data[j] = ''
+		data[i+11] = '\n\n'
+		#overwrite chunk
+		print('Writing to \'blog/index.html\'...')
+		with open('./index.html', 'w') as file:
+		    file.writelines(data)
+		print('Exiting (no errors).')
+		quit()
 
-quit()
-
-#detect if link to post already exists?
-
-
-#create and add (or update) link in /blog's index.html
+#chunk wasn't found, so create it
+for i in range(len(data)):
+	if '<div id="blog_feed">' in data[i]:
+		print('No reference to \'blog/' + directory_name + '\' found in blog/index.html.')
+		data.insert(i+1, '\n' + chunk + '\n')
+		#insert chunk
+		print('Updating \'blog/index.html\'...')
+		with open('./index.html', 'w') as file:
+			file.writelines(data)
+		print('Exiting (no errors).')
+		quit()

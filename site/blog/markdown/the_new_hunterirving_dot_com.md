@@ -1,6 +1,6 @@
 The New hunterirving.com!
 New look, same great taste.<br>As we welcome in a new era for hunterirving.com, let's take a stroll down memory lane and reflect on how we got here.
-Aug 14, '21
+Sep 30, '21
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel quam nec felis aliquet pellentesque. Fusce aliquam rhoncus mauris vitae tincidunt. Pellentesque mauris augue, commodo eget elit at, placerat congue elit. Nullam dolor diam, venenatis blandit lacus non, scelerisque porta nisl. Aenean tempus et nulla in aliquam. Maecenas lobortis mi id finibus porttitor. Vestibulum at iaculis magna. Sed et ipsum sapien. Duis ac est a libero lacinia malesuada et non mi.
 
