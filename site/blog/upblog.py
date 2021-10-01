@@ -30,19 +30,23 @@ except FileExistsError:
 #construct 'blog_guts' from markdown file
 blog_guts = ''
 print('Converting contents of \'' + markdown_filename + '\' to html...')
-for i in range(4, len(markdown_lines)):
+
+i = 4
+while i < len(markdown_lines):
 	if(markdown_lines[i].startswith('<img ')):
 		blog_guts += '\t\t\t\t' + markdown_lines[i]
+		i += 1
 	elif(markdown_lines[i].startswith('#')):
 		blog_guts += '\t\t\t\t' + '<h2 class="blog_subheading">' + markdown_lines[i][1:-1] + '</h2>\n'
+		i += 1
 	else:
 		if(markdown_lines[i] != '\n'):
 			blog_guts += '\t\t\t\t<p>\n'
-			while(markdown_lines[i] != '\n'):
+			while i < len(markdown_lines) and markdown_lines[i] != '\n':
 				blog_guts += '\t\t\t\t\t' + markdown_lines[i]
 				i += 1
 			blog_guts += '\t\t\t\t' + '</p>\n'
-			i += 1
+		i += 1
 
 #insert guts, date, and title into template
 print('Injecting html into template...')
