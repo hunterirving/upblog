@@ -1,7 +1,7 @@
 import fileinput, datetime
 from random import randint
 
-gobble_body = input('Post to Gobbler: ')
+gobble_body = input('Post to Gobbler: ').replace('<br>', '&nbsp<br>').replace('&nbsp<br>&nbsp<br>', '&nbsp<br><br>')
 
 newGobble = '''
 				<div class="gobble_prototype">
@@ -22,7 +22,15 @@ newGobble = '''
 				</div>
 '''
 
-for line in fileinput.FileInput("index.html",inplace=1):
-    if '<div id="prototype_container">' in line:
-        line=line.replace(line,line + newGobble)
-    print(line, end='')
+#read from file
+with open('index.html', 'r') as file:
+    data = file.readlines()
+
+#insert newGobble at top of prototype_container
+for i in range(len(data)):
+	if ('<div id="prototype_container">') in data[i]:
+		data[i] = data[i] + newGobble
+
+#write to file
+with open('index.html', 'w') as file:
+	file.writelines(data)

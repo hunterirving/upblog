@@ -9,11 +9,11 @@ def complete(text, state):
 readline.set_completer_delims(' \t\n;')
 readline.parse_and_bind("tab: complete")
 readline.set_completer(complete)
-os.chdir('./markdown/')
+os.chdir('markdown')
 markdown_filename = input('Select markdown file: ')
 with open(markdown_filename, 'r') as markdown_file:
 	markdown_lines = markdown_file.readlines()
-os.chdir('../')
+os.chdir('..')
 
 blog_title = markdown_lines[0]
 blog_brief = markdown_lines[1]
@@ -116,7 +116,7 @@ chunk = '\t\t\t\t<a class="nodecor" href="./' + directory_name + '''">
 				</a>'''
 
 #read from file
-with open('./index.html', 'r') as file:
+with open('index.html', 'r') as file:
     data = file.readlines()
 
 #search for existing chunk
@@ -141,7 +141,7 @@ for i in range(len(data)):
 		data.insert(i+1, '\n' + chunk + '\n')
 		#insert chunk
 		print('Updating \'blog/index.html\'...')
-		with open('./index.html', 'w') as file:
+		with open('index.html', 'w') as file:
 			file.writelines(data)
 		print('Exiting (no errors).')
 		quit()
