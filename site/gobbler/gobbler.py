@@ -1,7 +1,22 @@
 import fileinput, datetime
 from random import randint
 
-gobble_body = input('Post to Gobbler: ').replace('<br>', '&nbsp<br>').replace('&nbsp<br>&nbsp<br>', '&nbsp<br><br>')
+#get input from commandline
+gobble_body = input('Post to Gobbler: ')
+
+#add &nbsp characters before <br> tags to ensure email subject lines include proper spacing
+gobble_body = gobble_body.replace('<br>', '&nbsp<br>').replace('&nbsp<br>&nbsp<br>', '&nbsp<br><br>')
+
+#wrap hashtags in <span class="hashtag"> tags
+i = 0
+while i < len(gobble_body):
+	if gobble_body[i] == '#':
+		gobble_body = gobble_body[:i] + '<span class="hashtag">' + gobble_body[i:]
+		i += 22
+		while i < len(gobble_body) and gobble_body[i] != ' ':
+			i += 1
+		gobble_body = gobble_body[:i] + '</span>' + gobble_body[i:]
+	i += 1
 
 newGobble = '''
 				<div class="gobble_prototype">
@@ -26,7 +41,7 @@ newGobble = '''
 with open('index.html', 'r') as file:
     data = file.readlines()
 
-#insert newGobble at top of prototype_container
+#insert newGobble into data[] after prototype_container div tag
 for i in range(len(data)):
 	if ('<div id="prototype_container">') in data[i]:
 		data[i] = data[i] + newGobble

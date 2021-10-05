@@ -387,6 +387,15 @@ a {
 	text-decoration-color: var(--light_blue);
 }
 
+.hashtag {
+	color: var(--light_blue);
+}
+
+.hashtag:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--light_blue);
+}
+
 .gobble_inner_3 {
 	margin-top:12px;
 	position:relative;

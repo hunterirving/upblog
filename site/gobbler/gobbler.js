@@ -72,6 +72,7 @@ function commentOnGobble(event)
 {
 	var ancestor = findAncestor(event.target, 'gobble_inner');
 	var gobble_text = ancestor.getElementsByClassName('gobble_inner_2')[0].innerText;
+	gobble_text = encodeURIComponent(gobble_text);
 	var ml2 = rot("znv" + "yg" + "b:");
 	var h = rot("uhagre");
 	var s = rot("uha" + "gre" + "veivat");
