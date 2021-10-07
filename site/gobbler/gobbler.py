@@ -2,7 +2,7 @@ import fileinput, datetime
 from random import randint
 
 #get input from commandline
-gobble_body = input('Post to Gobbler: ')
+gobble_body = input('Gobble: ')
 
 #add &nbsp characters before <br> tags to ensure email subject lines include proper spacing
 gobble_body = gobble_body.replace('<br>', '&nbsp<br>').replace('&nbsp<br>&nbsp<br>', '&nbsp<br><br>')
@@ -38,7 +38,7 @@ newGobble = '''
 '''
 
 #read from file
-with open('index.html', 'r') as file:
+with open('index.html', 'r', encoding="utf") as file:
     data = file.readlines()
 
 #insert newGobble into data[] after prototype_container div tag
@@ -47,5 +47,5 @@ for i in range(len(data)):
 		data[i] = data[i] + newGobble
 
 #write to file
-with open('index.html', 'w') as file:
+with open('index.html', 'w', encoding="utf") as file:
 	file.writelines(data)
