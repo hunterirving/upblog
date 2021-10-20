@@ -171,6 +171,12 @@ a {
 	color: var(--light_blue);
 }
 
+#website_url:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--light_blue);
+	cursor: pointer;
+}
+
 #joined_container {
 	color: var(--dark_text);
 	transition: 0.2s;

@@ -56,7 +56,7 @@ html_buffer = '''<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<!-- set page title !-->
-		<title>''' + blog_title[:-1] + '''</title>
+		<title>The New hunterirving.com!</title>
 		<!-- set favicons !-->
 		<link rel="apple-touch-icon" sizes="180x180" href="../../resources/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="../../resources/favicons/favicon-32x32.png">
@@ -71,6 +71,7 @@ html_buffer = '''<!DOCTYPE html>
 		<!-- import js !-->
 		<script type="text/javascript" src="../blog.js"></script>
 		<script type="text/javascript" src="../../resources/main.js"></script>
+
 		<!-- support browsers that don't use js !-->
 		<noscript>
 			<style>
@@ -78,10 +79,10 @@ html_buffer = '''<!DOCTYPE html>
 			</style>
 		</noscript>
 	</head>
-	<body onload="populate_nav_links();">
-		<div id="page_container" class="centered noselect">
+	<body>
+		<div id="page_container" class="centered">
 			<div id="breadcrumb_container">
-				<h2 id="breadcrumbs"><a class="nodecor" href="../../">hi</a> / <a class="nodecor" href="../">blog</a> / ''' + blog_date[:-1] + '''</h2>
+				<h2 id="breadcrumbs"><a class="nodecor" href="../../">hi</a> / <a class="nodecor" href="../">blog</a> / Oct 16, '21</h2>
 				<div id="plus_box" onClick="toggleNavLinks()">
 					<div id="plus"></div>
 				</div>

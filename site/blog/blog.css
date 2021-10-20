@@ -5,11 +5,6 @@ body {
 	overflow-y: scroll;
 }
 
-a {
-	color: var(--text);
-	transition: color ease-in-out .15s;
-}
-
 #page_container {
 	max-width: 1024px;
 	padding-left: 50px;
@@ -28,13 +23,13 @@ a {
 
 #blog_heading {
 	margin-top:-5px;
-	margin-bottom:12px;
+	margin-bottom:20px;
 	font-size: 35px;
 }
 
 .blog_subheading {
 	font-size: 25px;
-	margin-bottom: 13px;
+	margin-bottom: 0px;
 	margin-top:55px;
 }
 
@@ -48,14 +43,14 @@ a {
 
 #blog_content {
 	font-size: 20px;
-	line-height: 29px;
 	padding:0px;
 	margin:0px;
 }
 
 #blog_content p {
-	margin-top:0px;
+	margin-top:20px;
 	margin-bottom:20px;
+	line-height:32px;
 }
 
 time {
@@ -154,8 +149,8 @@ time {
 }
 
 img {
-	padding-bottom:55px;
-	padding-top:55px;
+	padding-bottom:25px;
+	padding-top:25px;
 	max-width:100%;
 }
 
@@ -166,6 +161,33 @@ hr {
 	width: 60%;
 }
 
+iframe {
+	margin-top:20px;
+	margin-bottom:20px;
+	width:100%;
+	height: calc(100vh * .65);
+	background-color:white;
+}
+
+.rounded_button {
+	filter: drop-shadow(5px 4px 7px #444444);
+	font-size:20px;
+	font-weight:700;
+	text-align: center;
+	line-height:38px;
+	background-color: blue;
+	color: white;
+	border-top-left-radius: 9999px;
+	border-top-right-radius: 9999px;
+	border-bottom-left-radius: 9999px;
+	border-bottom-right-radius: 9999px;
+	box-sizing: border-box;
+	padding-left:16px;
+	padding-right:16px;
+	margin:0px;
+	cursor: pointer;
+	transition: background-color 0.2s, color 0.2s;
+}
 
 @media only screen and (max-width: 1124px) {
 	#page_container {
@@ -226,8 +248,8 @@ hr {
 		padding-top: 30px;
 	}
 	img {
-		padding-bottom:25px;
-		padding-top:25px;
+		padding-bottom:10px;
+		padding-top:10px;
 	}
 	#blog_heading {
 		margin-bottom: 12px;
@@ -236,18 +258,28 @@ hr {
 	}
 	.blog_subheading {
 		margin-top:40px;
-		margin-bottom: 6px;
+		margin-bottom: 0px;
 		line-height:29px;
 		font-size:22px;
 	}
 }
 
+a {
+	color: var(--text);
+	transition: color ease-in-out .15s, text-decoration ease-in-out .15s;
+}
+
+a::selection {
+	background-color: var(--text);
+}
+
 @media(any-hover: hover) and (any-pointer: fine) {
 	a:hover {
 		color: var(--highlight);
-		transition: color ease-in-out .15s;
+		transition: color ease-in-out .15s, text-decoration ease-in-out .15s;
 		cursor: pointer;
 	}
+
 }
 
 /* Dark mode by default, use light mode when preferred */

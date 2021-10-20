@@ -1,6 +1,6 @@
 function populate_nav_links()
 {
-	fetch('../index.html' + '?v=' + Date.now())
+	fetch('http://www.hunterirving.com/index.html' + '?v=' + Date.now())
 			.then(response => {
 					return response.text()
 			})
@@ -37,4 +37,17 @@ function toggleNavLinks()
 		//nav_links.style.paddingBottom = "50px";
 		nav_links.classList.remove('hidden');
 	}
+}
+
+function findAncestor (el, cls)
+{
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+}
+
+function iframe_redirect(event)
+{
+	parent_div = findAncestor(event.target, 'iframe_container');
+	iframe = parent_div.getElementsByClassName("webpage_iframe")[0];
+	window.location.href = iframe.contentWindow.location.href;
 }
