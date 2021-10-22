@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+	populate_nav_links();
+});
+
 function populate_nav_links()
 {
 	fetch('http://www.hunterirving.com/index.html' + '?v=' + Date.now())

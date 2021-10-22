@@ -1,6 +1,12 @@
 var z = 0; //holds current highest z-index
 var pageLoadTime = new Date();
 
+window.addEventListener('DOMContentLoaded', (event) => {
+	hidePrototypes();
+	showFollowButton();
+	appendGobbles();
+});
+
 function hidePrototypes()
 {
 	document.getElementById('prototype_container').style.display="none";

@@ -10,14 +10,13 @@ function one_or_two(caller) {
 	}
 }
 
-window.onload = function setup() {
+window.addEventListener('DOMContentLoaded', (event) => {
 	setInterval(function() {one_or_two(document.getElementById("first_one"));}, 300);
 	setInterval(function() {one_or_two(document.getElementById("second_one"));}, 300);
+	document.addEventListener('scroll', haiku_event);
 	countdown_date = new Date('October 16, 2036');
 	setInterval(function() {populate_countdown();}, 1000);
-	document.addEventListener('scroll', haiku_event);
-	populate_nav_links();
-}
+});
 
 function populate_countdown() {
 	document.getElementById("countdown").innerHTML = '<h1>Next Retrospective in:</h1><h2>' + countdown(countdown_date).toString() + '</h2>';
@@ -30,7 +29,7 @@ function haiku_event() {
 	}
 }
 
-var txt = "404 ERR0R.S0METHING USED T0 BE HERE... RIGHT?C0ULD THIS BE... THE END?";
+var txt = "404 ERR0R.SOMETHING USED TO BE HERE... RIGHT?COULD THIS BE... THE END?";
 var j = 0;
 var hangtime = 65;
 
