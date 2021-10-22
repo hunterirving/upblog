@@ -29,7 +29,7 @@ function haiku_event() {
 	}
 }
 
-var txt = "404 ERR0R.SOMETHING USED TO BE HERE... RIGHT?COULD THIS BE... THE END?";
+var txt = "404 ERROR.SOMETHING USED TO BE HERE... RIGHT?COULD THIS BE... THE END?";
 var j = 0;
 var hangtime = 65;
 

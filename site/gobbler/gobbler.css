@@ -382,6 +382,7 @@ a {
 	line-height: 20px;
 	color: var(--light_text);
 	transition: 0.2s;
+	overflow-wrap: anywhere;
 }
 
 .gobble_inner_2 a {

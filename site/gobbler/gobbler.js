@@ -3,8 +3,8 @@ var pageLoadTime = new Date();
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	hidePrototypes();
-	showFollowButton();
 	appendGobbles();
+	showFollowButton();
 });
 
 function hidePrototypes()
@@ -32,21 +32,43 @@ function flipGobble(event)
 	}
 	else
 	{
-		turnAmount = parseFloat(gobble.style.transform.slice(7).slice(0, -5)) + 0.5;
+		/* this is pretty hacky. if you can think of a better way to do this, please send me an e-mail. */
+		var turnAmount = parseFloat(gobble.style.transform.slice(7).slice(0, -5)) + 0.5;
 		gobble.style.transform = `rotate(${turnAmount}turn)`;
 		return_to_top_icon.style.transform = `rotate(-${turnAmount}turn)`;
 	}
 }
 
+function ellipses(event)
+{
+	var gobble_inner = findAncestor(event.target, 'gobble_inner');
+	var gobble_inner_2 = gobble_inner.getElementsByClassName('gobble_inner_2')[0];
+	for (i=0; i < gobble_inner_2.innerHTML.length; i++) {
+		if (gobble_inner_2.innerHTML[i] != '.') {
+			gobble_inner_2.innerHTML = '.';
+			setTimeout(appendDot, 500, gobble_inner_2);
+			setTimeout(appendDot, 1000, gobble_inner_2);
+			return;
+		}
+	}
+	gobble_inner_2.innerHTML += '.';
+	setTimeout(appendDot, 500, gobble_inner_2);
+	setTimeout(appendDot, 1000, gobble_inner_2);
+}
+
+function appendDot(object){
+	object.innerHTML += '.';
+}
+
 function addNoHover(event)
 {
-	green_hover = findAncestor(event.target, 'green_hover');
+	var green_hover = findAncestor(event.target, 'green_hover');
 	green_hover.classList.add("no_hover");
 }
 
 function removeNoHover(event)
 {
-	green_hover = findAncestor(event.target, 'green_hover');
+	var green_hover = findAncestor(event.target, 'green_hover');
 	green_hover.classList.remove("no_hover");
 }
 
@@ -121,8 +143,8 @@ function appendGobbles() {
 }
 
 function datetimeToPlaceholder(dateString) {
-	postTimeInLocalTime = new Date(dateString);
-	difInMillis =  pageLoadTime - postTimeInLocalTime;
+	var postTimeInLocalTime = new Date(dateString);
+	var difInMillis =  pageLoadTime - postTimeInLocalTime;
 
 	/* today */
 	if(difInMillis < 86400000) {
