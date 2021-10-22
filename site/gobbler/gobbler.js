@@ -51,7 +51,7 @@ function ellipses(event)
 			return;
 		}
 	}
-	gobble_inner_2.innerHTML += '.';
+	appendDot(gobble_inner_2);
 	setTimeout(appendDot, 500, gobble_inner_2);
 	setTimeout(appendDot, 1000, gobble_inner_2);
 }
