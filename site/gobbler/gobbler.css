@@ -58,6 +58,8 @@ a {
 	border-left: 1px solid var(--border);
 	border-right: 1px solid var(--border);
 	transition: 0.2s;
+	margin-left: -1px;
+	margin-right: -1px;
 }
 
 #follow_container {
@@ -329,14 +331,14 @@ a {
 }
 
 #cover_photo {
-	max-width:100%;
+	max-width: calc(100% + 2px);
 	display:block;
-	margin:0;
-	padding:0;
 	border-left: 1px solid var(--border);
 	border-right: 1px solid var(--border);
-	box-sizing:border-box;
 	transition: 0.2s;
+	margin-left: -1px;
+	margin-right: -1px;
+	box-sizing: border-box;
 }
 
 #profile_photo {
@@ -362,6 +364,8 @@ a {
 	padding-right:16px;
 	z-index: 0;
 	position: relative;
+	margin-left: -1px;
+	margin-right: -1px;
 }
 
 .gobble_inner {
