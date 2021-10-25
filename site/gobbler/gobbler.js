@@ -144,7 +144,8 @@ function appendGobbles() {
 
 function datetimeToPlaceholder(dateString) {
 	var postTimeInLocalTime = new Date(dateString);
-	var difInMillis =  pageLoadTime - postTimeInLocalTime;
+	var startOfTodayInLocalTime = postTimeInLocalTime.setHours(0,0,0,0);
+	var difInMillis =  pageLoadTime - startOfTodayInLocalTime;
 
 	/* today */
 	if(difInMillis < 86400000) {
@@ -158,7 +159,7 @@ function datetimeToPlaceholder(dateString) {
 	else if(difInMillis < 604800000) {
 		return "A Few Days Ago";
 	}
-	/* more than a week, less than a year */
+	/* this year */
 	else if(difInMillis < 31536000000) {
 		return "A While Ago";
 	}
