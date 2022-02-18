@@ -1,11 +1,34 @@
 var z = 0; //holds current highest z-index
+var scrolltimeInMinutes = 0;
 var pageLoadTime = new Date();
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	hidePrototypes();
 	appendGobbles();
 	showFollowButton();
+	window.setInterval("updateScrolltime()", 60000);
 });
+
+function updateScrolltime()
+{
+	scrolltimeInMinutes ++;
+	var scrolltimeString = "You've been scrolling for " + scrolltimeInMinutes + " minutes.";
+	var timeForABreak = " Consider taking a break. Gobbler will still be here when you get back.";
+	scrolltimeGobbles = document.getElementsByClassName('scrolltime');
+	for (i=0; i < scrolltimeGobbles.length; i++) {
+		if (scrolltimeInMinutes == 1) {
+			scrolltimeGobbles[i].innerHTML = scrolltimeString.slice(0, -2) + ".";
+		}
+		else if (scrolltimeInMinutes >= 15) {
+			scrolltimeGobbles[i].innerHTML = scrolltimeString + timeForABreak;
+		}
+		else {
+			scrolltimeGobbles[i].innerHTML = scrolltimeString;
+		}
+	}
+
+	console.log(document.getElementsByClassName('scrolltime'));
+}
 
 function hidePrototypes()
 {
@@ -84,16 +107,16 @@ function incrementActionCount(event)
 
 function findAncestor (el, cls)
 {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
-    return el;
+  while ((el = el.parentElement) && !el.classList.contains(cls));
+  return el;
 }
 
 function incrementValue(element_id)
 {
-    var value = parseInt(document.getElementById(element_id).innerHTML, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById(element_id).innerHTML = value;
+  var value = parseInt(document.getElementById(element_id).innerHTML, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById(element_id).innerHTML = value;
 }
 
 function commentOnGobble(event)

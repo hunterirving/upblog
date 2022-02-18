@@ -39,6 +39,9 @@ while i < len(markdown_lines):
 	elif(markdown_lines[i].startswith('#')):
 		blog_guts += '\t\t\t\t' + '<h2 class="blog_subheading">' + markdown_lines[i][1:-1] + '</h2>\n'
 		i += 1
+	elif(markdown_lines[i].startswith('<div')):
+		blog_guts += '\t\t\t\t' + markdown_lines[i]
+		i += 1
 	else:
 		if(markdown_lines[i] != '\n'):
 			blog_guts += '\t\t\t\t<p>\n'
@@ -56,7 +59,7 @@ html_buffer = '''<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<!-- set page title !-->
-		<title>The New hunterirving.com!</title>
+		<title>''' + blog_title + '''</title>
 		<!-- set favicons !-->
 		<link rel="apple-touch-icon" sizes="180x180" href="../../resources/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="../../resources/favicons/favicon-32x32.png">
@@ -68,9 +71,11 @@ html_buffer = '''<!DOCTYPE html>
 		<!-- import css !-->
 		<link rel="stylesheet" type="text/css" href="../../resources/main.css">
 		<link rel="stylesheet" type="text/css" href="../blog.css">
+		<link rel="stylesheet" type="text/css" href="./custom.css"> <!-- if exists !-->
 		<!-- import js !-->
 		<script type="text/javascript" src="../blog.js"></script>
 		<script type="text/javascript" src="../../resources/main.js"></script>
+		<script type="text/javascript" src="./custom.js"></script> <!-- if exists !-->
 
 		<!-- support browsers that don't use js !-->
 		<noscript>
@@ -82,7 +87,7 @@ html_buffer = '''<!DOCTYPE html>
 	<body>
 		<div id="page_container" class="centered">
 			<div id="breadcrumb_container">
-				<h2 id="breadcrumbs"><a class="nodecor" href="../../">hi</a> / <a class="nodecor" href="../">blog</a> / Oct 16, '21</h2>
+				<h2 id="breadcrumbs"><a class="nodecor" href="../../">hi</a> / <a class="nodecor" href="../">blog</a> / ''' +  blog_date[:-1] + '''</h2>
 				<div id="plus_box" onClick="toggleNavLinks()">
 					<div id="plus"></div>
 				</div>

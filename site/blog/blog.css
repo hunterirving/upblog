@@ -50,7 +50,7 @@ body {
 #blog_content p {
 	margin-top:20px;
 	margin-bottom:20px;
-	line-height:32px;
+	line-height:30px;
 }
 
 time {
@@ -262,15 +262,23 @@ iframe {
 		line-height:29px;
 		font-size:22px;
 	}
+	#blog_content {
+		font-size: 18px;
+	}
+	#blog_content p {
+		line-height:28px;
+	}
 }
 
+/* move up to main.css? */
 a {
 	color: var(--text);
 	transition: color ease-in-out .15s, text-decoration ease-in-out .15s;
 }
 
 a::selection {
-	background-color: var(--text);
+	color: var(--text);
+	/*background-color: var(--highlight);*/
 }
 
 @media(any-hover: hover) and (any-pointer: fine) {

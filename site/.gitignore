@@ -1,1 +1,13 @@
-push.py
+about_earth/
+about_humans/
+about_me/
+huntergram/
+resources/
+library/
+gobbler/
+blog/*/
+
+hi.css
+index.html
+!blog/index.html
+pushall.py

@@ -1,7 +1,7 @@
 :root {
 	--text:  #ffffff;
 	--background: #000000;
-  --highlight: #eeba30;
+  --highlight: #FF0000; /*#eeba30;*/
 	--seafoam: #05d5a1;
 	--ice: #22aadd;
 	--teal: #00ADB5;
@@ -15,8 +15,9 @@
 }
 
 ::selection {
-  background: var(--highlight);
-	color: var(--background);
+  /*background: var(--text);*/
+	color: var(--highlight);
+	text-decoration: none;
 }
 
 body {
