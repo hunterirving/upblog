@@ -8,6 +8,9 @@ resources/*
 library/
 gobbler/
 blog/*/
+!blog/markdown/
+blog/markdown/*
+!blog/markdown/template.md
 
 hi.css
 index.html
