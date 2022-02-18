@@ -1,8 +1,4 @@
-import os, glob, readline #pip install pyreadline (on windows)
-
-#eventually include push to github and push to AWS
-
-#markdown_filename = input('Markdown file name: ')
+import os, glob, readline
 
 def complete(text, state):
     return (glob.glob(text+'*')+[None])[state]
@@ -60,43 +56,18 @@ html_buffer = '''<!DOCTYPE html>
 	<head>
 		<!-- set page title !-->
 		<title>''' + blog_title + '''</title>
-		<!-- set favicons !-->
-		<link rel="apple-touch-icon" sizes="180x180" href="../../resources/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../../resources/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../../resources/favicons/favicon-16x16.png">
-		<link rel="manifest" href="../../resources/favicons/site.webmanifest">
-		<link rel="mask-icon" href="../../resources/favicons/safari-pinned-tab.svg" color="#000000">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="theme-color" content="#000000">
 		<!-- import css !-->
-		<link rel="stylesheet" type="text/css" href="../../resources/main.css">
 		<link rel="stylesheet" type="text/css" href="../blog.css">
-		<link rel="stylesheet" type="text/css" href="./custom.css"> <!-- if exists !-->
+		<link rel="stylesheet" type="text/css" href="../../resources/main.css">
 		<!-- import js !-->
 		<script type="text/javascript" src="../blog.js"></script>
 		<script type="text/javascript" src="../../resources/main.js"></script>
-		<script type="text/javascript" src="./custom.js"></script> <!-- if exists !-->
-
-		<!-- support browsers that don't use js !-->
-		<noscript>
-			<style>
-					#plus_box {display:none;}
-			</style>
-		</noscript>
 	</head>
 	<body>
 		<div id="page_container" class="centered">
 			<div id="breadcrumb_container">
-				<h2 id="breadcrumbs"><a class="nodecor" href="../../">hi</a> / <a class="nodecor" href="../">blog</a> / ''' +  blog_date[:-1] + '''</h2>
-				<div id="plus_box" onClick="toggleNavLinks()">
-					<div id="plus"></div>
-				</div>
+				<h2 id="breadcrumbs"><a class="nodecor" href="../../">home</a> / <a class="nodecor" href="../">blog</a> / ''' +  blog_date[:-1] + '''</h2>
 			</div>
-			<nav>
-				<h3 id="nav_links" class="hidden">
-					<!-- populated onload !-->
-				</h3>
-			</nav>
 			<h1 id="blog_heading">''' + blog_title[:-1] + '''</h1>
 			<div id="blog_content">''' + '\n' + blog_guts + '''\t\t\t</div>
 		</div>

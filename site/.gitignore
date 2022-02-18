@@ -2,7 +2,9 @@ about_earth/
 about_humans/
 about_me/
 huntergram/
-resources/
+resources/*
+!resources/main.css
+!resources/main.js
 library/
 gobbler/
 blog/*/
