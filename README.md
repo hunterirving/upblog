@@ -1,5 +1,8 @@
 # upblog
-what's upblog?
+what's up, blog?
+
+<img src="upblog.png">
+
 <br><br>
 upblog is a static site builder written in Python.
 

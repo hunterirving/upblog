@@ -1,0 +1,4 @@
+!blog/markdown/
+blog/markdown/*
+!blog/markdown/template.md
+!blog/index.html
