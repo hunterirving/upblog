@@ -1,17 +1,6 @@
-# upblog
-what's up, blog?
-
+#what's up, blog?
 <img src="upblog.png">
+upblog is a minimal blogging tool that converts markdown into HTML.<br><br>
 
-<br><br>
-upblog is a static site builder written in Python.
-
-upblog.py uses markdown files to construct html blog posts.<br><br>
-for each new blog post, a directory is created and a link is added to /blog/index.html.<br>
-existing posts can be updated by feeding upblog.py the same (modified) markdown file.<br><br>
-markdown files are interpreted as such:<br>
-filename: becomes the url extension (ex: example_blog_post.md -> hunterirving.com/blog/example_blog_post)<br>
-line 1: blog title<br>
-line 2: descriptive brief/teaser text<br>
-line 3: date (set manually)<br>
-line 4 onward: interpreted and converted into html
+run upblog.py to create (or update) a blog post.<br>
+a sample markdown file is provided (/blog/markdown/template.md).
